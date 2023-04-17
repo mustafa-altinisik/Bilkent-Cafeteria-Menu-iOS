@@ -1,0 +1,625 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16F835D629ED6386007A29BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F835D529ED6386007A29BE /* AppDelegate.swift */; };
+		16F835D829ED6386007A29BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F835D729ED6386007A29BE /* SceneDelegate.swift */; };
+		16F835DA29ED6386007A29BE /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F835D929ED6386007A29BE /* MainScreenViewController.swift */; };
+		16F835DD29ED6386007A29BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F835DB29ED6386007A29BE /* Main.storyboard */; };
+		16F835DF29ED6387007A29BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16F835DE29ED6387007A29BE /* Assets.xcassets */; };
+		16F835E229ED6387007A29BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F835E029ED6387007A29BE /* LaunchScreen.storyboard */; };
+		16F835ED29ED6387007A29BE /* BilkentYemekhaneMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F835EC29ED6387007A29BE /* BilkentYemekhaneMenuTests.swift */; };
+		16F835F729ED6387007A29BE /* BilkentYemekhaneMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F835F629ED6387007A29BE /* BilkentYemekhaneMenuUITests.swift */; };
+		16F835F929ED6387007A29BE /* BilkentYemekhaneMenuUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F835F829ED6387007A29BE /* BilkentYemekhaneMenuUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16F835E929ED6387007A29BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16F835CA29ED6386007A29BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16F835D129ED6386007A29BE;
+			remoteInfo = BilkentYemekhaneMenu;
+		};
+		16F835F329ED6387007A29BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16F835CA29ED6386007A29BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16F835D129ED6386007A29BE;
+			remoteInfo = BilkentYemekhaneMenu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16F835D229ED6386007A29BE /* BilkentYemekhaneMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BilkentYemekhaneMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16F835D529ED6386007A29BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		16F835D729ED6386007A29BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		16F835D929ED6386007A29BE /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		16F835DC29ED6386007A29BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		16F835DE29ED6387007A29BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16F835E129ED6387007A29BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		16F835E329ED6387007A29BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16F835E829ED6387007A29BE /* BilkentYemekhaneMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BilkentYemekhaneMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16F835EC29ED6387007A29BE /* BilkentYemekhaneMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilkentYemekhaneMenuTests.swift; sourceTree = "<group>"; };
+		16F835F229ED6387007A29BE /* BilkentYemekhaneMenuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BilkentYemekhaneMenuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16F835F629ED6387007A29BE /* BilkentYemekhaneMenuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilkentYemekhaneMenuUITests.swift; sourceTree = "<group>"; };
+		16F835F829ED6387007A29BE /* BilkentYemekhaneMenuUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilkentYemekhaneMenuUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16F835CF29ED6386007A29BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16F835E529ED6387007A29BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16F835EF29ED6387007A29BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16F835C929ED6386007A29BE = {
+			isa = PBXGroup;
+			children = (
+				16F835D429ED6386007A29BE /* BilkentYemekhaneMenu */,
+				16F835EB29ED6387007A29BE /* BilkentYemekhaneMenuTests */,
+				16F835F529ED6387007A29BE /* BilkentYemekhaneMenuUITests */,
+				16F835D329ED6386007A29BE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		16F835D329ED6386007A29BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16F835D229ED6386007A29BE /* BilkentYemekhaneMenu.app */,
+				16F835E829ED6387007A29BE /* BilkentYemekhaneMenuTests.xctest */,
+				16F835F229ED6387007A29BE /* BilkentYemekhaneMenuUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16F835D429ED6386007A29BE /* BilkentYemekhaneMenu */ = {
+			isa = PBXGroup;
+			children = (
+				16F8360529ED638E007A29BE /* ViewContollers */,
+				16F835D529ED6386007A29BE /* AppDelegate.swift */,
+				16F835D729ED6386007A29BE /* SceneDelegate.swift */,
+				16F835DE29ED6387007A29BE /* Assets.xcassets */,
+				16F835E029ED6387007A29BE /* LaunchScreen.storyboard */,
+				16F835E329ED6387007A29BE /* Info.plist */,
+			);
+			path = BilkentYemekhaneMenu;
+			sourceTree = "<group>";
+		};
+		16F835EB29ED6387007A29BE /* BilkentYemekhaneMenuTests */ = {
+			isa = PBXGroup;
+			children = (
+				16F835EC29ED6387007A29BE /* BilkentYemekhaneMenuTests.swift */,
+			);
+			path = BilkentYemekhaneMenuTests;
+			sourceTree = "<group>";
+		};
+		16F835F529ED6387007A29BE /* BilkentYemekhaneMenuUITests */ = {
+			isa = PBXGroup;
+			children = (
+				16F835F629ED6387007A29BE /* BilkentYemekhaneMenuUITests.swift */,
+				16F835F829ED6387007A29BE /* BilkentYemekhaneMenuUITestsLaunchTests.swift */,
+			);
+			path = BilkentYemekhaneMenuUITests;
+			sourceTree = "<group>";
+		};
+		16F8360529ED638E007A29BE /* ViewContollers */ = {
+			isa = PBXGroup;
+			children = (
+				16F8360629ED639A007A29BE /* Main Screen */,
+			);
+			path = ViewContollers;
+			sourceTree = "<group>";
+		};
+		16F8360629ED639A007A29BE /* Main Screen */ = {
+			isa = PBXGroup;
+			children = (
+				16F835D929ED6386007A29BE /* MainScreenViewController.swift */,
+				16F835DB29ED6386007A29BE /* Main.storyboard */,
+			);
+			path = "Main Screen";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16F835D129ED6386007A29BE /* BilkentYemekhaneMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16F835FC29ED6387007A29BE /* Build configuration list for PBXNativeTarget "BilkentYemekhaneMenu" */;
+			buildPhases = (
+				16F835CE29ED6386007A29BE /* Sources */,
+				16F835CF29ED6386007A29BE /* Frameworks */,
+				16F835D029ED6386007A29BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BilkentYemekhaneMenu;
+			productName = BilkentYemekhaneMenu;
+			productReference = 16F835D229ED6386007A29BE /* BilkentYemekhaneMenu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		16F835E729ED6387007A29BE /* BilkentYemekhaneMenuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16F835FF29ED6387007A29BE /* Build configuration list for PBXNativeTarget "BilkentYemekhaneMenuTests" */;
+			buildPhases = (
+				16F835E429ED6387007A29BE /* Sources */,
+				16F835E529ED6387007A29BE /* Frameworks */,
+				16F835E629ED6387007A29BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16F835EA29ED6387007A29BE /* PBXTargetDependency */,
+			);
+			name = BilkentYemekhaneMenuTests;
+			productName = BilkentYemekhaneMenuTests;
+			productReference = 16F835E829ED6387007A29BE /* BilkentYemekhaneMenuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		16F835F129ED6387007A29BE /* BilkentYemekhaneMenuUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16F8360229ED6387007A29BE /* Build configuration list for PBXNativeTarget "BilkentYemekhaneMenuUITests" */;
+			buildPhases = (
+				16F835EE29ED6387007A29BE /* Sources */,
+				16F835EF29ED6387007A29BE /* Frameworks */,
+				16F835F029ED6387007A29BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16F835F429ED6387007A29BE /* PBXTargetDependency */,
+			);
+			name = BilkentYemekhaneMenuUITests;
+			productName = BilkentYemekhaneMenuUITests;
+			productReference = 16F835F229ED6387007A29BE /* BilkentYemekhaneMenuUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16F835CA29ED6386007A29BE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					16F835D129ED6386007A29BE = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					16F835E729ED6387007A29BE = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 16F835D129ED6386007A29BE;
+					};
+					16F835F129ED6387007A29BE = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 16F835D129ED6386007A29BE;
+					};
+				};
+			};
+			buildConfigurationList = 16F835CD29ED6386007A29BE /* Build configuration list for PBXProject "BilkentYemekhaneMenu" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 16F835C929ED6386007A29BE;
+			productRefGroup = 16F835D329ED6386007A29BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16F835D129ED6386007A29BE /* BilkentYemekhaneMenu */,
+				16F835E729ED6387007A29BE /* BilkentYemekhaneMenuTests */,
+				16F835F129ED6387007A29BE /* BilkentYemekhaneMenuUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16F835D029ED6386007A29BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F835E229ED6387007A29BE /* LaunchScreen.storyboard in Resources */,
+				16F835DF29ED6387007A29BE /* Assets.xcassets in Resources */,
+				16F835DD29ED6386007A29BE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16F835E629ED6387007A29BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16F835F029ED6387007A29BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16F835CE29ED6386007A29BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F835DA29ED6386007A29BE /* MainScreenViewController.swift in Sources */,
+				16F835D629ED6386007A29BE /* AppDelegate.swift in Sources */,
+				16F835D829ED6386007A29BE /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16F835E429ED6387007A29BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F835ED29ED6387007A29BE /* BilkentYemekhaneMenuTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16F835EE29ED6387007A29BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F835F729ED6387007A29BE /* BilkentYemekhaneMenuUITests.swift in Sources */,
+				16F835F929ED6387007A29BE /* BilkentYemekhaneMenuUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		16F835EA29ED6387007A29BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16F835D129ED6386007A29BE /* BilkentYemekhaneMenu */;
+			targetProxy = 16F835E929ED6387007A29BE /* PBXContainerItemProxy */;
+		};
+		16F835F429ED6387007A29BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16F835D129ED6386007A29BE /* BilkentYemekhaneMenu */;
+			targetProxy = 16F835F329ED6387007A29BE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		16F835DB29ED6386007A29BE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16F835DC29ED6386007A29BE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		16F835E029ED6387007A29BE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16F835E129ED6387007A29BE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		16F835FA29ED6387007A29BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		16F835FB29ED6387007A29BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16F835FD29ED6387007A29BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7WX6W95X32;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BilkentYemekhaneMenu/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = altinisik.mustafa.BilkentYemekhaneMenu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		16F835FE29ED6387007A29BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7WX6W95X32;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BilkentYemekhaneMenu/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = altinisik.mustafa.BilkentYemekhaneMenu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		16F8360029ED6387007A29BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7WX6W95X32;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = altinisik.mustafa.BilkentYemekhaneMenuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BilkentYemekhaneMenu.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BilkentYemekhaneMenu";
+			};
+			name = Debug;
+		};
+		16F8360129ED6387007A29BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7WX6W95X32;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = altinisik.mustafa.BilkentYemekhaneMenuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BilkentYemekhaneMenu.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BilkentYemekhaneMenu";
+			};
+			name = Release;
+		};
+		16F8360329ED6387007A29BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7WX6W95X32;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = altinisik.mustafa.BilkentYemekhaneMenuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BilkentYemekhaneMenu;
+			};
+			name = Debug;
+		};
+		16F8360429ED6387007A29BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7WX6W95X32;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = altinisik.mustafa.BilkentYemekhaneMenuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BilkentYemekhaneMenu;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16F835CD29ED6386007A29BE /* Build configuration list for PBXProject "BilkentYemekhaneMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16F835FA29ED6387007A29BE /* Debug */,
+				16F835FB29ED6387007A29BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16F835FC29ED6387007A29BE /* Build configuration list for PBXNativeTarget "BilkentYemekhaneMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16F835FD29ED6387007A29BE /* Debug */,
+				16F835FE29ED6387007A29BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16F835FF29ED6387007A29BE /* Build configuration list for PBXNativeTarget "BilkentYemekhaneMenuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16F8360029ED6387007A29BE /* Debug */,
+				16F8360129ED6387007A29BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16F8360229ED6387007A29BE /* Build configuration list for PBXNativeTarget "BilkentYemekhaneMenuUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16F8360329ED6387007A29BE /* Debug */,
+				16F8360429ED6387007A29BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 16F835CA29ED6386007A29BE /* Project object */;
+}

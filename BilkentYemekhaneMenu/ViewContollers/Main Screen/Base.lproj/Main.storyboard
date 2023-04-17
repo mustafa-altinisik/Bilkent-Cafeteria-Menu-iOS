@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zDx-m7-wQC">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Screen View Controller-->
+        <scene sceneID="StO-Iq-S81">
+            <objects>
+                <viewController id="zDx-m7-wQC" customClass="MainScreenViewController" customModule="BilkentYemekhaneMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q0b-vk-0yq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Kci-xx-XEt" userLabel="lunchDinnerStack">
+                                <rect key="frame" x="16" y="745.33333333333337" width="361" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjv-If-TtF" userLabel="lunchButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="175.66666666666666" height="34.333333333333336"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Öğlen"/>
+                                        <connections>
+                                            <action selector="lunchButtonTapped:" destination="zDx-m7-wQC" eventType="touchUpInside" id="wjJ-DS-uPW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmW-FR-nLr" userLabel="dinnerButton">
+                                        <rect key="frame" x="185.66666666666663" y="0.0" width="175.33333333333337" height="34.333333333333336"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Akşam"/>
+                                        <connections>
+                                            <action selector="dinnerButtonTapped:" destination="zDx-m7-wQC" eventType="touchUpInside" id="wcm-yJ-b6p"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="wnH-MA-nbJ" userLabel="daysStack">
+                                <rect key="frame" x="16" y="783.66666666666663" width="361" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRV-Oc-kcP" userLabel="mondayButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="45.333333333333336" height="34.333333333333336"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="P"/>
+                                        <connections>
+                                            <action selector="mondayButtonTapped:" destination="zDx-m7-wQC" eventType="touchUpInside" id="l3h-Ap-yXh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bps-7r-B6T" userLabel="tuesdayButton">
+                                        <rect key="frame" x="45.333333333333343" y="0.0" width="45.666666666666657" height="34.333333333333336"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="S"/>
+                                        <connections>
+                                            <action selector="tuesdayButtonTapped:" destination="zDx-m7-wQC" eventType="touchUpInside" id="MX8-AX-eda"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vta-gl-rQl" userLabel="wednesdayButton">
+                                        <rect key="frame" x="91" y="0.0" width="47" height="34.333333333333336"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Ç"/>
+                                        <connections>
+                                            <action selector="wednesdayButtonTapped:" destination="zDx-m7-wQC" eventType="touchUpInside" id="oif-tz-Hpe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xM0-Zb-uPX" userLabel="thursdayButton">
+                                        <rect key="frame" x="138" y="0.0" width="45.666666666666657" height="34.333333333333336"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="P"/>
+                                        <connections>
+                                            <action selector="thurdayButtonTapped:" destination="zDx-m7-wQC" eventType="touchUpInside" id="n4L-3l-6oW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUJ-pL-Ck9" userLabel="fridayButton">
+                                        <rect key="frame" x="183.66666666666666" y="0.0" width="47" height="34.333333333333336"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="C"/>
+                                        <connections>
+                                            <action selector="fridayButtonTapped:" destination="zDx-m7-wQC" eventType="touchUpInside" id="yK6-LB-nlH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9f-iQ-Khi" userLabel="saturdayButton">
+                                        <rect key="frame" x="230.66666666666666" y="0.0" width="65.666666666666657" height="34.333333333333336"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Cts"/>
+                                        <connections>
+                                            <action selector="saturdayButtonTapped:" destination="zDx-m7-wQC" eventType="touchUpInside" id="eUe-0J-HKM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmd-bQ-it6" userLabel="sundayButton">
+                                        <rect key="frame" x="296.33333333333331" y="0.0" width="64.666666666666686" height="34.333333333333336"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Pzr"/>
+                                        <connections>
+                                            <action selector="sundayButtonTapped:" destination="zDx-m7-wQC" eventType="touchUpInside" id="weX-oY-5jn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEJ-gg-lsh">
+                                <rect key="frame" x="16" y="59" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="byC-gw-0T3"/>
+                                    <constraint firstAttribute="height" constant="40" id="mCc-z2-ggo"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="line.3.horizontal" catalog="system"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E2w-x8-Q77"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="E2w-x8-Q77" firstAttribute="bottom" secondItem="wnH-MA-nbJ" secondAttribute="bottom" id="3KE-6h-nif"/>
+                            <constraint firstItem="E2w-x8-Q77" firstAttribute="trailing" secondItem="wnH-MA-nbJ" secondAttribute="trailing" constant="16" id="Ztl-4F-baH"/>
+                            <constraint firstItem="wnH-MA-nbJ" firstAttribute="top" secondItem="Kci-xx-XEt" secondAttribute="bottom" constant="4" id="cSV-uj-EQr"/>
+                            <constraint firstItem="E2w-x8-Q77" firstAttribute="trailing" secondItem="Kci-xx-XEt" secondAttribute="trailing" constant="16" id="i7S-Pb-Xdn"/>
+                            <constraint firstItem="Kci-xx-XEt" firstAttribute="leading" secondItem="E2w-x8-Q77" secondAttribute="leading" constant="16" id="uQe-6x-dSV"/>
+                            <constraint firstItem="lEJ-gg-lsh" firstAttribute="top" secondItem="E2w-x8-Q77" secondAttribute="top" id="vM3-cn-vJY"/>
+                            <constraint firstItem="lEJ-gg-lsh" firstAttribute="leading" secondItem="E2w-x8-Q77" secondAttribute="leading" constant="16" id="y4g-n9-T8H"/>
+                            <constraint firstItem="wnH-MA-nbJ" firstAttribute="leading" secondItem="E2w-x8-Q77" secondAttribute="leading" constant="16" id="yVh-KU-jV2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dinnerButton" destination="NmW-FR-nLr" id="YT6-D6-xgv"/>
+                        <outlet property="fridayButton" destination="AUJ-pL-Ck9" id="yKA-qH-vyA"/>
+                        <outlet property="lunchButton" destination="yjv-If-TtF" id="xAM-pu-edq"/>
+                        <outlet property="mondayButton" destination="SRV-Oc-kcP" id="flb-tv-eYc"/>
+                        <outlet property="saturdayButton" destination="E9f-iQ-Khi" id="eG4-8C-su5"/>
+                        <outlet property="sideMenuButton" destination="lEJ-gg-lsh" id="IZt-7a-gue"/>
+                        <outlet property="sundayButton" destination="cmd-bQ-it6" id="bkv-ey-NWC"/>
+                        <outlet property="thursdayButton" destination="xM0-Zb-uPX" id="g4j-oz-tLV"/>
+                        <outlet property="tuesdayButton" destination="bps-7r-B6T" id="PeK-Rl-qqV"/>
+                        <outlet property="wednesdayButton" destination="Vta-gl-rQl" id="ILT-2L-AsC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sFa-Ba-UMC" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="707.63358778625957" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
+    </resources>
+</document>
