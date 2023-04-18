@@ -16,6 +16,13 @@
 		16F835ED29ED6387007A29BE /* BilkentYemekhaneMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F835EC29ED6387007A29BE /* BilkentYemekhaneMenuTests.swift */; };
 		16F835F729ED6387007A29BE /* BilkentYemekhaneMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F835F629ED6387007A29BE /* BilkentYemekhaneMenuUITests.swift */; };
 		16F835F929ED6387007A29BE /* BilkentYemekhaneMenuUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F835F829ED6387007A29BE /* BilkentYemekhaneMenuUITestsLaunchTests.swift */; };
+		16F8360A29ED8FE1007A29BE /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8360829ED8FE1007A29BE /* MealTableViewCell.swift */; };
+		16F8360B29ED8FE1007A29BE /* MealTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F8360929ED8FE1007A29BE /* MealTableViewCell.xib */; };
+		16F8360F29EDBF8C007A29BE /* models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8360E29EDBF8C007A29BE /* models.swift */; };
+		16F8361229EDC66F007A29BE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8361129EDC66F007A29BE /* NetworkManager.swift */; };
+		A4A6BFE62D9EB09F25238BD7 /* Pods_BilkentYemekhaneMenuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A95879172F2CD162079E25 /* Pods_BilkentYemekhaneMenuTests.framework */; };
+		AEC191A7AB5700F3E923D97B /* Pods_BilkentYemekhaneMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A914EDDE7E1B040342E841 /* Pods_BilkentYemekhaneMenu.framework */; };
+		D0A5478B960C2088B9DC2DD3 /* Pods_BilkentYemekhaneMenu_BilkentYemekhaneMenuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949CC4C843820B2936884F76 /* Pods_BilkentYemekhaneMenu_BilkentYemekhaneMenuUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,19 @@
 		16F835F229ED6387007A29BE /* BilkentYemekhaneMenuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BilkentYemekhaneMenuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F835F629ED6387007A29BE /* BilkentYemekhaneMenuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilkentYemekhaneMenuUITests.swift; sourceTree = "<group>"; };
 		16F835F829ED6387007A29BE /* BilkentYemekhaneMenuUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilkentYemekhaneMenuUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		16F8360829ED8FE1007A29BE /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
+		16F8360929ED8FE1007A29BE /* MealTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealTableViewCell.xib; sourceTree = "<group>"; };
+		16F8360E29EDBF8C007A29BE /* models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = models.swift; sourceTree = "<group>"; };
+		16F8361129EDC66F007A29BE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		1A16BCE255D34D57277E6B3A /* Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests.debug.xcconfig"; path = "Target Support Files/Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests/Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		319A67B6C09743C001DE7AF8 /* Pods-BilkentYemekhaneMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilkentYemekhaneMenu.release.xcconfig"; path = "Target Support Files/Pods-BilkentYemekhaneMenu/Pods-BilkentYemekhaneMenu.release.xcconfig"; sourceTree = "<group>"; };
+		39DFF9A3BD91EBBA09E1D051 /* Pods-BilkentYemekhaneMenuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilkentYemekhaneMenuTests.release.xcconfig"; path = "Target Support Files/Pods-BilkentYemekhaneMenuTests/Pods-BilkentYemekhaneMenuTests.release.xcconfig"; sourceTree = "<group>"; };
+		609CE93FC7218478EADAFBF6 /* Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests.release.xcconfig"; path = "Target Support Files/Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests/Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests.release.xcconfig"; sourceTree = "<group>"; };
+		73A95879172F2CD162079E25 /* Pods_BilkentYemekhaneMenuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BilkentYemekhaneMenuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		949CC4C843820B2936884F76 /* Pods_BilkentYemekhaneMenu_BilkentYemekhaneMenuUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BilkentYemekhaneMenu_BilkentYemekhaneMenuUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0AA77EE8E2AEA99D829DBA4 /* Pods-BilkentYemekhaneMenuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilkentYemekhaneMenuTests.debug.xcconfig"; path = "Target Support Files/Pods-BilkentYemekhaneMenuTests/Pods-BilkentYemekhaneMenuTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E8741BD796A9F50E6D87A770 /* Pods-BilkentYemekhaneMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilkentYemekhaneMenu.debug.xcconfig"; path = "Target Support Files/Pods-BilkentYemekhaneMenu/Pods-BilkentYemekhaneMenu.debug.xcconfig"; sourceTree = "<group>"; };
+		F7A914EDDE7E1B040342E841 /* Pods_BilkentYemekhaneMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BilkentYemekhaneMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEC191A7AB5700F3E923D97B /* Pods_BilkentYemekhaneMenu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4A6BFE62D9EB09F25238BD7 /* Pods_BilkentYemekhaneMenuTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0A5478B960C2088B9DC2DD3 /* Pods_BilkentYemekhaneMenu_BilkentYemekhaneMenuUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +106,8 @@
 				16F835EB29ED6387007A29BE /* BilkentYemekhaneMenuTests */,
 				16F835F529ED6387007A29BE /* BilkentYemekhaneMenuUITests */,
 				16F835D329ED6386007A29BE /* Products */,
+				91C5D926EB67B7937BDA2976 /* Pods */,
+				852CAD36226C54FB5A5C2177 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +124,9 @@
 		16F835D429ED6386007A29BE /* BilkentYemekhaneMenu */ = {
 			isa = PBXGroup;
 			children = (
+				16F8361029EDC664007A29BE /* Managers */,
+				16F8360D29EDBF7E007A29BE /* Models */,
+				16F8360729ED8FC4007A29BE /* Cells */,
 				16F8360529ED638E007A29BE /* ViewContollers */,
 				16F835D529ED6386007A29BE /* AppDelegate.swift */,
 				16F835D729ED6386007A29BE /* SceneDelegate.swift */,
@@ -143,6 +171,63 @@
 			path = "Main Screen";
 			sourceTree = "<group>";
 		};
+		16F8360729ED8FC4007A29BE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				16F8360C29ED8FE8007A29BE /* MealTableViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		16F8360C29ED8FE8007A29BE /* MealTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				16F8360829ED8FE1007A29BE /* MealTableViewCell.swift */,
+				16F8360929ED8FE1007A29BE /* MealTableViewCell.xib */,
+			);
+			path = MealTableViewCell;
+			sourceTree = "<group>";
+		};
+		16F8360D29EDBF7E007A29BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				16F8360E29EDBF8C007A29BE /* models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		16F8361029EDC664007A29BE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				16F8361129EDC66F007A29BE /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		852CAD36226C54FB5A5C2177 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7A914EDDE7E1B040342E841 /* Pods_BilkentYemekhaneMenu.framework */,
+				949CC4C843820B2936884F76 /* Pods_BilkentYemekhaneMenu_BilkentYemekhaneMenuUITests.framework */,
+				73A95879172F2CD162079E25 /* Pods_BilkentYemekhaneMenuTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91C5D926EB67B7937BDA2976 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8741BD796A9F50E6D87A770 /* Pods-BilkentYemekhaneMenu.debug.xcconfig */,
+				319A67B6C09743C001DE7AF8 /* Pods-BilkentYemekhaneMenu.release.xcconfig */,
+				1A16BCE255D34D57277E6B3A /* Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests.debug.xcconfig */,
+				609CE93FC7218478EADAFBF6 /* Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests.release.xcconfig */,
+				A0AA77EE8E2AEA99D829DBA4 /* Pods-BilkentYemekhaneMenuTests.debug.xcconfig */,
+				39DFF9A3BD91EBBA09E1D051 /* Pods-BilkentYemekhaneMenuTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +235,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16F835FC29ED6387007A29BE /* Build configuration list for PBXNativeTarget "BilkentYemekhaneMenu" */;
 			buildPhases = (
+				DEC526384AACCC4DC7B14048 /* [CP] Check Pods Manifest.lock */,
 				16F835CE29ED6386007A29BE /* Sources */,
 				16F835CF29ED6386007A29BE /* Frameworks */,
 				16F835D029ED6386007A29BE /* Resources */,
+				379A0D3470C1658741411D06 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +254,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16F835FF29ED6387007A29BE /* Build configuration list for PBXNativeTarget "BilkentYemekhaneMenuTests" */;
 			buildPhases = (
+				2E1F2DA366729D4D4789C659 /* [CP] Check Pods Manifest.lock */,
 				16F835E429ED6387007A29BE /* Sources */,
 				16F835E529ED6387007A29BE /* Frameworks */,
 				16F835E629ED6387007A29BE /* Resources */,
@@ -185,9 +273,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16F8360229ED6387007A29BE /* Build configuration list for PBXNativeTarget "BilkentYemekhaneMenuUITests" */;
 			buildPhases = (
+				A954C25F1412B194BCABAD68 /* [CP] Check Pods Manifest.lock */,
 				16F835EE29ED6387007A29BE /* Sources */,
 				16F835EF29ED6387007A29BE /* Frameworks */,
 				16F835F029ED6387007A29BE /* Resources */,
+				7257862AE24487013572978F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,6 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16F8360B29ED8FE1007A29BE /* MealTableViewCell.xib in Resources */,
 				16F835E229ED6387007A29BE /* LaunchScreen.storyboard in Resources */,
 				16F835DF29ED6387007A29BE /* Assets.xcassets in Resources */,
 				16F835DD29ED6386007A29BE /* Main.storyboard in Resources */,
@@ -269,11 +360,117 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2E1F2DA366729D4D4789C659 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BilkentYemekhaneMenuTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		379A0D3470C1658741411D06 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BilkentYemekhaneMenu/Pods-BilkentYemekhaneMenu-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BilkentYemekhaneMenu/Pods-BilkentYemekhaneMenu-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BilkentYemekhaneMenu/Pods-BilkentYemekhaneMenu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7257862AE24487013572978F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests/Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests/Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests/Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A954C25F1412B194BCABAD68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEC526384AACCC4DC7B14048 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BilkentYemekhaneMenu-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		16F835CE29ED6386007A29BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16F8361229EDC66F007A29BE /* NetworkManager.swift in Sources */,
+				16F8360F29EDBF8C007A29BE /* models.swift in Sources */,
+				16F8360A29ED8FE1007A29BE /* MealTableViewCell.swift in Sources */,
 				16F835DA29ED6386007A29BE /* MainScreenViewController.swift in Sources */,
 				16F835D629ED6386007A29BE /* AppDelegate.swift in Sources */,
 				16F835D829ED6386007A29BE /* SceneDelegate.swift in Sources */,
@@ -448,6 +645,7 @@
 		};
 		16F835FD29ED6387007A29BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8741BD796A9F50E6D87A770 /* Pods-BilkentYemekhaneMenu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -477,6 +675,7 @@
 		};
 		16F835FE29ED6387007A29BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 319A67B6C09743C001DE7AF8 /* Pods-BilkentYemekhaneMenu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -506,6 +705,7 @@
 		};
 		16F8360029ED6387007A29BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0AA77EE8E2AEA99D829DBA4 /* Pods-BilkentYemekhaneMenuTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -526,6 +726,7 @@
 		};
 		16F8360129ED6387007A29BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39DFF9A3BD91EBBA09E1D051 /* Pods-BilkentYemekhaneMenuTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -546,6 +747,7 @@
 		};
 		16F8360329ED6387007A29BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A16BCE255D34D57277E6B3A /* Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -564,6 +766,7 @@
 		};
 		16F8360429ED6387007A29BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 609CE93FC7218478EADAFBF6 /* Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
