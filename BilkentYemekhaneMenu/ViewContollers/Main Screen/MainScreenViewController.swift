@@ -24,6 +24,13 @@ class MainScreenViewController: UIViewController {
         super.viewDidLoad()
         setLabels()
         configureDayButtons()
+        NetworkManager.shared.fetchMenu { menu, error in
+            if let error = error {
+                print("Error fetching menu: \(error)")
+            } else if let menu = menu {
+                print("Menu: \(menu[0].alternative.courses[0].name)")
+            }
+        }
     }
     
     private func setBorders(){
