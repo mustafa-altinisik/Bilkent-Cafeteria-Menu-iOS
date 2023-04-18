@@ -1,0 +1,6 @@
+framework module Pods_BilkentYemekhaneMenuTests {
+  umbrella header "Pods-BilkentYemekhaneMenuTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
