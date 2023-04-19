@@ -31,5 +31,11 @@ class NetworkManager {
                 completion(nil, error)
             }
         }
+        //Save todays date to userDefaults as dataFetchDate
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        let dateString = formatter.string(from: date)
+        UserDefaults.standard.set(dateString, forKey: "dataFetchDate")
     }
 }
