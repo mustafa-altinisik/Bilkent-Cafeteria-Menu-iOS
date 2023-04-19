@@ -6,6 +6,7 @@ target 'BilkentYemekhaneMenu' do
   use_frameworks!
 
   # Pods for BilkentYemekhaneMenu
+    pod 'SideMenu'
     pod 'Alamofire'
   target 'BilkentYemekhaneMenuTests' do
     inherit! :search_paths
