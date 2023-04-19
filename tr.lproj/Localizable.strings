@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  BilkentYemekhaneMenu
+
+  Created by Asım Altınışık on 19.04.2023.
+ /* Turkish */
+
+"likedCourses" = "Beğendiğim Yemekler";
+"notificationSettings" = "Bildirim Ayarları";
+"darkMode" = "Koyu Tema";
+"language" = "Dil";
+"aboutUs" = "Hakkımızda";
+"chooseALanguage" = "Bir dil seçin.";
+"appRestartMessage" = "Dili değiştirdikten sonra uygulamayı yeniden açmanız gerekecektir.";
+"cancel" = "İptal";
+"settings" = "Ayarlar";
+"extras" = "Ekstralar";
+"fixedMenu" = "Fiks Menü";
+"alternativeMenu" = "Seçmeli Menü";
+"thisAppIsAnOpenSourceProject" = "Bu uygulama bir açık kaynak projedir.";
+*/

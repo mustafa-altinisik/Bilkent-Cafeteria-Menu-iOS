@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		167B40D229F012A40096C73A /* NutritionFactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B40D029F012A40096C73A /* NutritionFactsTableViewCell.swift */; };
+		167B40D329F012A40096C73A /* NutritionFactsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167B40D129F012A40096C73A /* NutritionFactsTableViewCell.xib */; };
+		167B40D829F020890096C73A /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B40D629F020890096C73A /* SideMenuTableViewController.swift */; };
+		167B40D929F020890096C73A /* SideMenuTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167B40D729F020890096C73A /* SideMenuTableViewController.xib */; };
+		167B40DB29F02A310096C73A /* SideMenuPredefinedCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B40DA29F02A310096C73A /* SideMenuPredefinedCategoryTableViewCell.swift */; };
+		167B40E329F0333F0096C73A /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B40E129F0333F0096C73A /* AboutUsViewController.swift */; };
+		167B40E429F0333F0096C73A /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167B40E229F0333F0096C73A /* AboutUsViewController.xib */; };
 		16F835D629ED6386007A29BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F835D529ED6386007A29BE /* AppDelegate.swift */; };
 		16F835D829ED6386007A29BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F835D729ED6386007A29BE /* SceneDelegate.swift */; };
 		16F835DA29ED6386007A29BE /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F835D929ED6386007A29BE /* MainScreenViewController.swift */; };
@@ -20,6 +27,7 @@
 		16F8360B29ED8FE1007A29BE /* MealTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F8360929ED8FE1007A29BE /* MealTableViewCell.xib */; };
 		16F8360F29EDBF8C007A29BE /* models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8360E29EDBF8C007A29BE /* models.swift */; };
 		16F8361229EDC66F007A29BE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8361129EDC66F007A29BE /* NetworkManager.swift */; };
+		16FE26D729F06EAF00483094 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16FE26D929F06EAF00483094 /* Localizable.strings */; };
 		A4A6BFE62D9EB09F25238BD7 /* Pods_BilkentYemekhaneMenuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A95879172F2CD162079E25 /* Pods_BilkentYemekhaneMenuTests.framework */; };
 		AEC191A7AB5700F3E923D97B /* Pods_BilkentYemekhaneMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A914EDDE7E1B040342E841 /* Pods_BilkentYemekhaneMenu.framework */; };
 		D0A5478B960C2088B9DC2DD3 /* Pods_BilkentYemekhaneMenu_BilkentYemekhaneMenuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949CC4C843820B2936884F76 /* Pods_BilkentYemekhaneMenu_BilkentYemekhaneMenuUITests.framework */; };
@@ -43,11 +51,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		167B40D029F012A40096C73A /* NutritionFactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionFactsTableViewCell.swift; sourceTree = "<group>"; };
+		167B40D129F012A40096C73A /* NutritionFactsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NutritionFactsTableViewCell.xib; sourceTree = "<group>"; };
+		167B40D629F020890096C73A /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
+		167B40D729F020890096C73A /* SideMenuTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuTableViewController.xib; sourceTree = "<group>"; };
+		167B40DA29F02A310096C73A /* SideMenuPredefinedCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuPredefinedCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		167B40E129F0333F0096C73A /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		167B40E229F0333F0096C73A /* AboutUsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
+		167B40EE29F037970096C73A /* tr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = tr; path = tr.lproj/Main.storyboard; sourceTree = "<group>"; };
+		167B40F129F037F00096C73A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16F835D229ED6386007A29BE /* BilkentYemekhaneMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BilkentYemekhaneMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F835D529ED6386007A29BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16F835D729ED6386007A29BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		16F835D929ED6386007A29BE /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
-		16F835DC29ED6386007A29BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16F835DE29ED6387007A29BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16F835E129ED6387007A29BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16F835E329ED6387007A29BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +76,8 @@
 		16F8360929ED8FE1007A29BE /* MealTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealTableViewCell.xib; sourceTree = "<group>"; };
 		16F8360E29EDBF8C007A29BE /* models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = models.swift; sourceTree = "<group>"; };
 		16F8361129EDC66F007A29BE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		16FE26D829F06EAF00483094 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		16FE26DA29F06EB200483094 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1A16BCE255D34D57277E6B3A /* Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests.debug.xcconfig"; path = "Target Support Files/Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests/Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		319A67B6C09743C001DE7AF8 /* Pods-BilkentYemekhaneMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilkentYemekhaneMenu.release.xcconfig"; path = "Target Support Files/Pods-BilkentYemekhaneMenu/Pods-BilkentYemekhaneMenu.release.xcconfig"; sourceTree = "<group>"; };
 		39DFF9A3BD91EBBA09E1D051 /* Pods-BilkentYemekhaneMenuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilkentYemekhaneMenuTests.release.xcconfig"; path = "Target Support Files/Pods-BilkentYemekhaneMenuTests/Pods-BilkentYemekhaneMenuTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,9 +117,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		167B40D429F012AB0096C73A /* NutritionFactsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				167B40D029F012A40096C73A /* NutritionFactsTableViewCell.swift */,
+				167B40D129F012A40096C73A /* NutritionFactsTableViewCell.xib */,
+			);
+			name = NutritionFactsTableViewCell;
+			path = "NutritionFactsTableVİewCell";
+			sourceTree = "<group>";
+		};
+		167B40D529F01A1A0096C73A /* Side Menu */ = {
+			isa = PBXGroup;
+			children = (
+				167B40D629F020890096C73A /* SideMenuTableViewController.swift */,
+				167B40D729F020890096C73A /* SideMenuTableViewController.xib */,
+			);
+			path = "Side Menu";
+			sourceTree = "<group>";
+		};
 		16F835C929ED6386007A29BE = {
 			isa = PBXGroup;
 			children = (
+				16FE26D929F06EAF00483094 /* Localizable.strings */,
 				16F835D429ED6386007A29BE /* BilkentYemekhaneMenu */,
 				16F835EB29ED6387007A29BE /* BilkentYemekhaneMenuTests */,
 				16F835F529ED6387007A29BE /* BilkentYemekhaneMenuUITests */,
@@ -157,7 +195,9 @@
 		16F8360529ED638E007A29BE /* ViewContollers */ = {
 			isa = PBXGroup;
 			children = (
+				167B40D529F01A1A0096C73A /* Side Menu */,
 				16F8360629ED639A007A29BE /* Main Screen */,
+				16FE26DB29F07BE800483094 /* About Us Screen */,
 			);
 			path = ViewContollers;
 			sourceTree = "<group>";
@@ -175,6 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				16F8360C29ED8FE8007A29BE /* MealTableViewCell */,
+				167B40D429F012AB0096C73A /* NutritionFactsTableViewCell */,
+				167B40DA29F02A310096C73A /* SideMenuPredefinedCategoryTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -204,6 +246,15 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		16FE26DB29F07BE800483094 /* About Us Screen */ = {
+			isa = PBXGroup;
+			children = (
+				167B40E129F0333F0096C73A /* AboutUsViewController.swift */,
+				167B40E229F0333F0096C73A /* AboutUsViewController.xib */,
+			);
+			path = "About Us Screen";
+			sourceTree = "<group>";
+		};
 		852CAD36226C54FB5A5C2177 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,7 +275,6 @@
 				A0AA77EE8E2AEA99D829DBA4 /* Pods-BilkentYemekhaneMenuTests.debug.xcconfig */,
 				39DFF9A3BD91EBBA09E1D051 /* Pods-BilkentYemekhaneMenuTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -314,11 +364,12 @@
 			};
 			buildConfigurationList = 16F835CD29ED6386007A29BE /* Build configuration list for PBXProject "BilkentYemekhaneMenu" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = tr;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = 16F835C929ED6386007A29BE;
 			productRefGroup = 16F835D329ED6386007A29BE /* Products */;
@@ -337,8 +388,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				167B40D329F012A40096C73A /* NutritionFactsTableViewCell.xib in Resources */,
+				167B40E429F0333F0096C73A /* AboutUsViewController.xib in Resources */,
+				167B40D929F020890096C73A /* SideMenuTableViewController.xib in Resources */,
 				16F8360B29ED8FE1007A29BE /* MealTableViewCell.xib in Resources */,
 				16F835E229ED6387007A29BE /* LaunchScreen.storyboard in Resources */,
+				16FE26D729F06EAF00483094 /* Localizable.strings in Resources */,
 				16F835DF29ED6387007A29BE /* Assets.xcassets in Resources */,
 				16F835DD29ED6386007A29BE /* Main.storyboard in Resources */,
 			);
@@ -468,12 +523,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				167B40E329F0333F0096C73A /* AboutUsViewController.swift in Sources */,
+				167B40D229F012A40096C73A /* NutritionFactsTableViewCell.swift in Sources */,
 				16F8361229EDC66F007A29BE /* NetworkManager.swift in Sources */,
+				167B40DB29F02A310096C73A /* SideMenuPredefinedCategoryTableViewCell.swift in Sources */,
 				16F8360F29EDBF8C007A29BE /* models.swift in Sources */,
 				16F8360A29ED8FE1007A29BE /* MealTableViewCell.swift in Sources */,
 				16F835DA29ED6386007A29BE /* MainScreenViewController.swift in Sources */,
 				16F835D629ED6386007A29BE /* AppDelegate.swift in Sources */,
 				16F835D829ED6386007A29BE /* SceneDelegate.swift in Sources */,
+				167B40D829F020890096C73A /* SideMenuTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,7 +572,8 @@
 		16F835DB29ED6386007A29BE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				16F835DC29ED6386007A29BE /* Base */,
+				167B40EE29F037970096C73A /* tr */,
+				167B40F129F037F00096C73A /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -526,6 +586,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		16FE26D929F06EAF00483094 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16FE26D829F06EAF00483094 /* tr */,
+				16FE26DA29F06EB200483094 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -533,6 +602,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -579,7 +649,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -593,6 +663,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -633,7 +704,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

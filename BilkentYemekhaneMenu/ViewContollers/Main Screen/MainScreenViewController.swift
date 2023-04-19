@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import SideMenu
 
+@available(iOS 16, *)
 class MainScreenViewController: UIViewController {
-    
+
+    @IBOutlet private weak var coursesTable: UITableView!
     @IBOutlet private weak var sideMenuButton: UIButton!
     @IBOutlet private weak var lunchButton: UIButton!
     @IBOutlet private weak var dinnerButton: UIButton!
@@ -20,17 +23,49 @@ class MainScreenViewController: UIViewController {
     @IBOutlet private weak var saturdayButton: UIButton!
     @IBOutlet private weak var sundayButton: UIButton!
     
+    var preferredLanguage = Locale(identifier: Locale.preferredLanguages.first ?? "en").language.languageCode?.identifier
+    private var leftSideMenu = SideMenuNavigationController(rootViewController: SideMenuTableViewController())
+
+    static var fixedMeal: Meal?
+    static var alternativeMeal: Meal?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setLabels()
         configureDayButtons()
+        setTableView()
+        setLeftSideMenu()
+    }
+    
+    @IBAction func sideMenuButtonTapped(_ sender: Any) {
+        present(leftSideMenu, animated: true)
+    }
+    
+    private func returnMenuFor(day: Int, completion: @escaping (Menu?) -> Void) {
         NetworkManager.shared.fetchMenu { menu, error in
             if let error = error {
                 print("Error fetching menu: \(error)")
+                completion(nil)
             } else if let menu = menu {
-                print("Menu: \(menu[0].alternative.courses[0].name)")
+                    completion(menu[day-1])
             }
         }
+    }
+    
+    @objc func handleSwipeGesture(_ gesture: UISwipeGestureRecognizer) {
+        if gesture.direction == .left{
+            sideMenuButtonTapped(UIButton.self)
+        }
+    }
+    
+    private func setLeftSideMenu() {
+        leftSideMenu.leftSide = true
+        leftSideMenu.setNavigationBarHidden(true, animated: false)
+        sideMenuButton.tintColor = .black
+        let sideMenuSwipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture(_:)))
+        sideMenuSwipeGesture.direction = .right
+        view.addGestureRecognizer(sideMenuSwipeGesture)
     }
     
     private func setBorders(){
@@ -203,24 +238,141 @@ class MainScreenViewController: UIViewController {
             } else if currentTime >= 14 {
                 // Time is past 14:00, disable lunch button only
                 lunchButton.tintColor = .gray
-                dinnerButton.tintColor = .black
+                dinnerButton.tintColor = .label
             } else {
                 // Time is before 14:00, enable both buttons
-                lunchButton.tintColor = .black
-                dinnerButton.tintColor = .black
+                lunchButton.tintColor = .label
+                dinnerButton.tintColor = .label
             }
         } else {
             // Selected day is after today, enable both buttons
-            lunchButton.tintColor = .black
-            dinnerButton.tintColor = .black
+            lunchButton.tintColor = .label
+            dinnerButton.tintColor = .label
         }
     }
 
     private func setMenuFor(dayOfTheWeek: Int, foodType: Int){
-        //Takes day of the week. Monday is 1, sunday is 7.
-        //Takes foodType. Lunch is 1, dinner is 2.
-        print("Day: " + String(dayOfTheWeek))
-        print("Food type: " + String(foodType))
+        returnMenuFor(day: dayOfTheWeek) { meals in
+            if let meals = meals {
+                if foodType ==  1{//lunch
+                    MainScreenViewController.fixedMeal = meals.lunch
+                    MainScreenViewController.alternativeMeal = meals.alternative
+                }else if foodType == 2{//dinner
+                    MainScreenViewController.fixedMeal = meals.dinner
+                    MainScreenViewController.alternativeMeal = meals.alternative
+                }
+                
+                DispatchQueue.main.async {
+                    self.coursesTable.reloadData()
+                }
+                
+            } else {
+                print("Error fetching menu")
+            }
+        }
+    }
+}
+
+@available(iOS 16, *)
+extension MainScreenViewController: UITableViewDataSource{
+    
+    private func setTableView(){
+        // Set table view data source and delegate
+        coursesTable.dataSource = self
+
+        // Register the cell nib
+        let nib = UINib(nibName: "MealTableViewCell", bundle: nil)
+        coursesTable.register(nib, forCellReuseIdentifier: "courseCell")
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "courseCell", for: indexPath) as! MealTableViewCell
+        cell.backgroundColor = .clear
+        
+        // Section 0: Fixed Menu
+        if indexPath.section == 0 {
+            if let fixedMeal = MainScreenViewController.fixedMeal,
+               indexPath.row < fixedMeal.courses.count {
+                let course = fixedMeal.courses[indexPath.row]
+                if preferredLanguage == "tr"{
+                    cell.courseName.text = course.name
+                }else{
+                    cell.courseName.text = course.englishName
+                }
+                
+                // Add a "Ⓥ" character if the course name contains "Vegan"
+                if course.name.contains("Vegan") || course.name.contains("Vejetaryen"){
+                    cell.courseName.text?.append(" 🌱")
+                }
+            }
+        }
+        
+        // Section 1: Alternative Menu
+        if indexPath.section == 1 {
+            if let alternativeMeal = MainScreenViewController.alternativeMeal,
+               indexPath.row < alternativeMeal.courses.count {
+                let course = alternativeMeal.courses[indexPath.row]
+                if preferredLanguage == "tr"{
+                    cell.courseName.text = course.name
+                }else{
+                    cell.courseName.text = course.englishName
+                }
+                
+                // Add a "Ⓥ" character if the course name contains "Vegan"
+                if course.name.contains("Vegan") {
+                    cell.courseName.text?.append(" 🌱")
+                }
+            }
+        }
+        
+        return cell
+    }
+
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // Two sections: Fixed Menu and Alternative Menu
+        return 2
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let fixedCount = MainScreenViewController.fixedMeal?.courses.count,
+           let alternativeCount = MainScreenViewController.alternativeMeal?.courses.count {
+            
+            // Section 0: Fixed Menu
+            if section == 0 {
+                return fixedCount
+            }
+            
+            // Section 1: Alternative Menu
+            if section == 1 {
+                return alternativeCount
+            }
+        }
+        
+        // handle the case where one or both of the optional values are nil
+        return 0
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        // Section 0: Fixed Menu
+        if section == 0 {
+            return NSLocalizedString("fixedMenu", comment: "")
+        }
+        
+        // Section 1: Alternative Menu
+        if section == 1 {
+            return NSLocalizedString("alternativeMenu", comment: "")
+        }
+        
+        return nil
+    }
+    
+    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        if section == 0 {
+            return MainScreenViewController.fixedMeal?.nutritionFacts
+        } else {
+            return nil
+        }
     }
 }
 

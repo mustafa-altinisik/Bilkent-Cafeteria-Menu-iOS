@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  BilkentYemekhaneMenu
+
+  Created by Asım Altınışık on 19.04.2023.
+ /* English */
+
+"likedCourses" = "Liked Courses";
+"notificationSettings" = "Notification Settings";
+"darkMode" = "Dark Mode";
+"language" = "Language";
+"aboutUs" = "About Us";
+"chooseALanguage" = "Choose a language.";
+"appRestartMessage" = "You need to restart the app after changing the language.";
+"cancel" = "Cancel";
+"settings" = "Settings";
+"extras" = "Extras";
+"fixedMenu" = "Fixed Menu";
+"alternativeMenu" = "Alternative Menu";
+"thisAppIsAnOpenSourceProject" = "This app is an open source project.";
+*/
