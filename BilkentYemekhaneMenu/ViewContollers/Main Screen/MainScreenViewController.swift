@@ -305,6 +305,10 @@ extension MainScreenViewController: UITableViewDataSource{
                 if UserDefaultsManager.shared.isCourseInFavorites(course: course){
                     DispatchQueue.main.async {
                         cell.likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+                     }
+                }else{
+                    DispatchQueue.main.async {
+                        cell.likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
                     }
                 }
             }
@@ -332,6 +336,10 @@ extension MainScreenViewController: UITableViewDataSource{
                 if UserDefaultsManager.shared.isCourseInFavorites(course: course){
                     DispatchQueue.main.async {
                         cell.likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+                    }
+                }else{
+                    DispatchQueue.main.async {
+                        cell.likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
                     }
                 }
             }
