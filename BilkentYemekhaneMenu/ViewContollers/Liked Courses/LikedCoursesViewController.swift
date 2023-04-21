@@ -35,6 +35,16 @@ class LikedCoursesViewController: UIViewController, UITableViewDataSource, MealT
         }else{
             cell.courseName.text = favoriteCourse.englishName
         }
+        
+        if favoriteCourse.name.contains("Vegan") || favoriteCourse.name.contains("Vejetaryen"){
+            cell.courseName.text?.append(" 🌱")
+        }
+        
+        if UserDefaultsManager.shared.isCourseInFavorites(course: favoriteCourse){
+            DispatchQueue.main.async {
+                cell.likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            }
+        }
         return cell
     }
     
