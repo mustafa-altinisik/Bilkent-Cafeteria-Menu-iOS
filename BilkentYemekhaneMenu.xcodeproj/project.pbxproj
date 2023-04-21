@@ -28,6 +28,11 @@
 		16F8360F29EDBF8C007A29BE /* models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8360E29EDBF8C007A29BE /* models.swift */; };
 		16F8361229EDC66F007A29BE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8361129EDC66F007A29BE /* NetworkManager.swift */; };
 		16FE26D729F06EAF00483094 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16FE26D929F06EAF00483094 /* Localizable.strings */; };
+		16FE26DD29F091F900483094 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE26DC29F091F900483094 /* UserDefaultsManager.swift */; };
+		16FE26E029F094CB00483094 /* LikedCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE26DE29F094CB00483094 /* LikedCoursesViewController.swift */; };
+		16FE26E129F094CB00483094 /* LikedCoursesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16FE26DF29F094CB00483094 /* LikedCoursesViewController.xib */; };
+		16FE26E329F12A5700483094 /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE26E229F12A5600483094 /* MenuManager.swift */; };
+		16FE26E529F1722500483094 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE26E429F1722500483094 /* NotificationsManager.swift */; };
 		A4A6BFE62D9EB09F25238BD7 /* Pods_BilkentYemekhaneMenuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A95879172F2CD162079E25 /* Pods_BilkentYemekhaneMenuTests.framework */; };
 		AEC191A7AB5700F3E923D97B /* Pods_BilkentYemekhaneMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A914EDDE7E1B040342E841 /* Pods_BilkentYemekhaneMenu.framework */; };
 		D0A5478B960C2088B9DC2DD3 /* Pods_BilkentYemekhaneMenu_BilkentYemekhaneMenuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949CC4C843820B2936884F76 /* Pods_BilkentYemekhaneMenu_BilkentYemekhaneMenuUITests.framework */; };
@@ -78,6 +83,11 @@
 		16F8361129EDC66F007A29BE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		16FE26D829F06EAF00483094 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		16FE26DA29F06EB200483094 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		16FE26DC29F091F900483094 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		16FE26DE29F094CB00483094 /* LikedCoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedCoursesViewController.swift; sourceTree = "<group>"; };
+		16FE26DF29F094CB00483094 /* LikedCoursesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikedCoursesViewController.xib; sourceTree = "<group>"; };
+		16FE26E229F12A5600483094 /* MenuManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
+		16FE26E429F1722500483094 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
 		1A16BCE255D34D57277E6B3A /* Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests.debug.xcconfig"; path = "Target Support Files/Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests/Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		319A67B6C09743C001DE7AF8 /* Pods-BilkentYemekhaneMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilkentYemekhaneMenu.release.xcconfig"; path = "Target Support Files/Pods-BilkentYemekhaneMenu/Pods-BilkentYemekhaneMenu.release.xcconfig"; sourceTree = "<group>"; };
 		39DFF9A3BD91EBBA09E1D051 /* Pods-BilkentYemekhaneMenuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilkentYemekhaneMenuTests.release.xcconfig"; path = "Target Support Files/Pods-BilkentYemekhaneMenuTests/Pods-BilkentYemekhaneMenuTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +127,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1613C6D829F2649B005F7B80 /* Liked Courses */ = {
+			isa = PBXGroup;
+			children = (
+				16FE26DE29F094CB00483094 /* LikedCoursesViewController.swift */,
+				16FE26DF29F094CB00483094 /* LikedCoursesViewController.xib */,
+			);
+			path = "Liked Courses";
+			sourceTree = "<group>";
+		};
 		167B40D429F012AB0096C73A /* NutritionFactsTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +217,7 @@
 				167B40D529F01A1A0096C73A /* Side Menu */,
 				16F8360629ED639A007A29BE /* Main Screen */,
 				16FE26DB29F07BE800483094 /* About Us Screen */,
+				1613C6D829F2649B005F7B80 /* Liked Courses */,
 			);
 			path = ViewContollers;
 			sourceTree = "<group>";
@@ -242,6 +262,9 @@
 			isa = PBXGroup;
 			children = (
 				16F8361129EDC66F007A29BE /* NetworkManager.swift */,
+				16FE26DC29F091F900483094 /* UserDefaultsManager.swift */,
+				16FE26E229F12A5600483094 /* MenuManager.swift */,
+				16FE26E429F1722500483094 /* NotificationsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -393,6 +416,7 @@
 				167B40D929F020890096C73A /* SideMenuTableViewController.xib in Resources */,
 				16F8360B29ED8FE1007A29BE /* MealTableViewCell.xib in Resources */,
 				16F835E229ED6387007A29BE /* LaunchScreen.storyboard in Resources */,
+				16FE26E129F094CB00483094 /* LikedCoursesViewController.xib in Resources */,
 				16FE26D729F06EAF00483094 /* Localizable.strings in Resources */,
 				16F835DF29ED6387007A29BE /* Assets.xcassets in Resources */,
 				16F835DD29ED6386007A29BE /* Main.storyboard in Resources */,
@@ -527,7 +551,11 @@
 				167B40D229F012A40096C73A /* NutritionFactsTableViewCell.swift in Sources */,
 				16F8361229EDC66F007A29BE /* NetworkManager.swift in Sources */,
 				167B40DB29F02A310096C73A /* SideMenuPredefinedCategoryTableViewCell.swift in Sources */,
+				16FE26DD29F091F900483094 /* UserDefaultsManager.swift in Sources */,
+				16FE26E329F12A5700483094 /* MenuManager.swift in Sources */,
 				16F8360F29EDBF8C007A29BE /* models.swift in Sources */,
+				16FE26E029F094CB00483094 /* LikedCoursesViewController.swift in Sources */,
+				16FE26E529F1722500483094 /* NotificationsManager.swift in Sources */,
 				16F8360A29ED8FE1007A29BE /* MealTableViewCell.swift in Sources */,
 				16F835DA29ED6386007A29BE /* MainScreenViewController.swift in Sources */,
 				16F835D629ED6386007A29BE /* AppDelegate.swift in Sources */,
@@ -730,7 +758,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -760,7 +788,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
