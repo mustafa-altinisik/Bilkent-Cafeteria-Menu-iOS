@@ -8,7 +8,6 @@
 import UIKit
 import SideMenu
 
-@available(iOS 16, *)
 class MainScreenViewController: UIViewController {
 
     @IBOutlet private weak var coursesTable: UITableView!
@@ -38,23 +37,18 @@ class MainScreenViewController: UIViewController {
         setLeftSideMenu()
     }
     
+    @IBAction func favoriteCoursesButtonTapped(_ sender: Any) {
+        let likedCoursesScreen = LikedCoursesViewController()
+        likedCoursesScreen.modalPresentationStyle = .fullScreen
+        present(likedCoursesScreen, animated: true, completion: nil)
+    }
+    
     @IBAction func sideMenuButtonTapped(_ sender: Any) {
         present(leftSideMenu, animated: true)
     }
     
-    private func returnMenuFor(day: Int, completion: @escaping (Menu?) -> Void) {
-        NetworkManager.shared.fetchMenu { menu, error in
-            if let error = error {
-                print("Error fetching menu: \(error)")
-                completion(nil)
-            } else if let menu = menu {
-                    completion(menu[day-1])
-            }
-        }
-    }
-    
     @objc func handleSwipeGesture(_ gesture: UISwipeGestureRecognizer) {
-        if gesture.direction == .left{
+        if gesture.direction == .right{
             sideMenuButtonTapped(UIButton.self)
         }
     }
@@ -62,7 +56,7 @@ class MainScreenViewController: UIViewController {
     private func setLeftSideMenu() {
         leftSideMenu.leftSide = true
         leftSideMenu.setNavigationBarHidden(true, animated: false)
-        sideMenuButton.tintColor = .black
+        sideMenuButton.tintColor = .label
         let sideMenuSwipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture(_:)))
         sideMenuSwipeGesture.direction = .right
         view.addGestureRecognizer(sideMenuSwipeGesture)
@@ -252,7 +246,7 @@ class MainScreenViewController: UIViewController {
     }
 
     private func setMenuFor(dayOfTheWeek: Int, foodType: Int){
-        returnMenuFor(day: dayOfTheWeek) { meals in
+        MenuManager.shared.returnMenuFor(day: dayOfTheWeek) { meals in
             if let meals = meals {
                 if foodType ==  1{//lunch
                     MainScreenViewController.fixedMeal = meals.lunch
@@ -273,7 +267,6 @@ class MainScreenViewController: UIViewController {
     }
 }
 
-@available(iOS 16, *)
 extension MainScreenViewController: UITableViewDataSource{
     
     private func setTableView(){
@@ -288,12 +281,16 @@ extension MainScreenViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "courseCell", for: indexPath) as! MealTableViewCell
         cell.backgroundColor = .clear
+        cell.delegate = self
         
         // Section 0: Fixed Menu
         if indexPath.section == 0 {
             if let fixedMeal = MainScreenViewController.fixedMeal,
                indexPath.row < fixedMeal.courses.count {
                 let course = fixedMeal.courses[indexPath.row]
+                cell.course = course
+                cell.rowNumber = [indexPath]
+                
                 if preferredLanguage == "tr"{
                     cell.courseName.text = course.name
                 }else{
@@ -304,6 +301,12 @@ extension MainScreenViewController: UITableViewDataSource{
                 if course.name.contains("Vegan") || course.name.contains("Vejetaryen"){
                     cell.courseName.text?.append(" 🌱")
                 }
+                
+                if UserDefaultsManager.shared.isCourseInFavorites(course: course){
+                    DispatchQueue.main.async {
+                        cell.likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+                    }
+                }
             }
         }
         
@@ -312,6 +315,9 @@ extension MainScreenViewController: UITableViewDataSource{
             if let alternativeMeal = MainScreenViewController.alternativeMeal,
                indexPath.row < alternativeMeal.courses.count {
                 let course = alternativeMeal.courses[indexPath.row]
+                cell.course = course
+                cell.rowNumber = [indexPath]
+                
                 if preferredLanguage == "tr"{
                     cell.courseName.text = course.name
                 }else{
@@ -322,9 +328,14 @@ extension MainScreenViewController: UITableViewDataSource{
                 if course.name.contains("Vegan") {
                     cell.courseName.text?.append(" 🌱")
                 }
+                
+                if UserDefaultsManager.shared.isCourseInFavorites(course: course){
+                    DispatchQueue.main.async {
+                        cell.likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+                    }
+                }
             }
         }
-        
         return cell
     }
 
@@ -367,12 +378,29 @@ extension MainScreenViewController: UITableViewDataSource{
         return nil
     }
     
-    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        if section == 0 {
-            return MainScreenViewController.fixedMeal?.nutritionFacts
-        } else {
-            return nil
-        }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
 }
 
+
+extension MainScreenViewController: MealTableViewCellDelegate{
+    func likeButtonTapped(for course: Course, rowNumber: [IndexPath]) {
+        for indexPath in rowNumber {
+            if let cell = coursesTable.cellForRow(at: indexPath) as? MealTableViewCell {
+                UserDefaultsManager.shared.addRemoveCourse(course: course)
+                if cell.likeButton.currentImage == UIImage(systemName: "heart.fill") {
+                    DispatchQueue.main.async {
+                        cell.likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        cell.likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+                    }
+                }
+            }
+        }
+        print(UserDefaultsManager.shared.getAllLikedCourses())
+    }
+}
