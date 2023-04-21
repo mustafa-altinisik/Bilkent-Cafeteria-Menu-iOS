@@ -8,12 +8,31 @@
 import UIKit
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+            if granted {
+                print("Notification permissions granted.")
+            } else {
+                print("Notification permissions denied.")
+            }
+        }
+        center.delegate = self
+        
+        if UserDefaultsManager.shared.getNotifications() == nil && UserDefaultsManager.shared.checkIfAppLaunchedForTheFirstTime(){
+    
+            UserDefaultsManager.shared.addNotification(SingleNotification(name: NSLocalizedString("lunchMenu", comment: ""), hour: 11, minute: 30, days: [1, 1, 1, 1, 1, 0, 0], isOn: true))
+            UserDefaultsManager.shared.addNotification(SingleNotification(name: NSLocalizedString("dinnerMenu", comment: ""), hour: 16, minute: 30, days: [1, 1, 1, 1, 1, 0, 0], isOn: true))
+        }
+        
+        NotificationManager.shared.setScheduledNotifications()
+
         return true
     }
 
