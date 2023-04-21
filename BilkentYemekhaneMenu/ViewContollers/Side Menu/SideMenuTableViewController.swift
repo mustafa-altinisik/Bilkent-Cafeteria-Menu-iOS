@@ -7,7 +7,6 @@
 
 import UIKit
 
-@available(iOS 16, *)
 class SideMenuTableViewController: UITableViewController {
     
     struct categoriesWithSystemImageNamesStruct {
@@ -56,8 +55,25 @@ class SideMenuTableViewController: UITableViewController {
         let category = categoriesWithImages[indexPath.section][indexPath.row]
 
         cell.categoryButton.setTitle(category.categoryNameToBeDisplayed, for: .normal)
+        cell.categoryButton.setTitleColor(.label, for: .normal) // Set text color to label color
         cell.categoryButton.setImage(UIImage(systemName: category.categoryIcon), for: .normal)
         cell.selectionStyle = .none // Disable selection color
+        
+        switch category.categoryId {
+        case 2:
+            let notificationSwitch = UISwitch()
+            notificationSwitch.isOn = false
+            notificationSwitch.alpha = 1.0 // set alpha to 1.0 to make it appear as if it is enabled
+            if self.traitCollection.userInterfaceStyle == .dark{
+                DispatchQueue.main.async {
+                    notificationSwitch.isOn = true
+                }
+            }
+            notificationSwitch.addTarget(self, action: #selector(switchValueDidChange(_:)), for: .valueChanged)
+            cell.accessoryView = notificationSwitch
+        default:
+            break
+        }
 
         return cell
     }
@@ -65,6 +81,10 @@ class SideMenuTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let category = categoriesWithImages[indexPath.section][indexPath.row]
         switch category.categoryId {
+        case 0:
+            let likedCoursesScreen = LikedCoursesViewController()
+            likedCoursesScreen.modalPresentationStyle = .fullScreen
+            present(likedCoursesScreen, animated: true, completion: nil)
         case 3:
             let alertController = UIAlertController(title: NSLocalizedString("chooseALanguage", comment: ""), message: NSLocalizedString("appRestartMessage", comment: ""), preferredStyle: .actionSheet)
             if preferredLanguage == "tr" {
@@ -118,6 +138,43 @@ class SideMenuTableViewController: UITableViewController {
         
         // Restart the app to apply the language change
         exit(EXIT_SUCCESS)
+    }
+    
+//    @objc func switchValueDidChange(_ sender: UISwitch) {
+//        if sender.isOn {
+//            // Set app theme to dark
+//            UIApplication.shared.windows.forEach { window in
+//                window.overrideUserInterfaceStyle = .dark
+//            }
+//        } else {
+//            // Set app theme to light
+//            UIApplication.shared.windows.forEach { window in
+//                window.overrideUserInterfaceStyle = .light
+//            }
+//        }
+//    }
+    
+    @objc func switchValueDidChange(_ sender: UISwitch) {
+        let animationDuration: TimeInterval = 0.3
+        UIView.transition(
+            with: view,
+            duration: animationDuration,
+            options: [.transitionCrossDissolve],
+            animations: {
+                if sender.isOn {
+                    // Set app theme to dark
+                    UIApplication.shared.windows.forEach { window in
+                        window.overrideUserInterfaceStyle = .dark
+                    }
+                } else {
+                    // Set app theme to light
+                    UIApplication.shared.windows.forEach { window in
+                        window.overrideUserInterfaceStyle = .light
+                    }
+                }
+            },
+            completion: nil
+        )
     }
 
 }
