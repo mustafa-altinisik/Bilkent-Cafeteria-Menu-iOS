@@ -17,7 +17,7 @@ final class SideMenuPredefinedCategoryTVC: UITableViewCell {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
         button.imageView?.contentMode = .scaleAspectFit
-        button.imageView?.tintColor = .black
+        button.imageView?.tintColor = .label
         button.imageView?.clipsToBounds = true
         button.contentHorizontalAlignment = .left
         button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
