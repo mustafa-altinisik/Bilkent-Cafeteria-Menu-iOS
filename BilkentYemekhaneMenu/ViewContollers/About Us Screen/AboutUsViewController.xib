@@ -23,6 +23,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="krokan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYy-LV-Dq9">
                     <rect key="frame" x="117.66666666666669" y="396" width="158" height="60"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                    <color key="textColor" red="0.98823529409999999" green="0.76078431369999999" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2023 Ankara" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGn-Ba-hhg">
@@ -49,7 +50,7 @@
                         <action selector="githubButtonTapped:" destination="-1" eventType="touchUpInside" id="o14-Yl-1K3"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXt-xB-slt">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXt-xB-slt" userLabel="backButton">
                     <rect key="frame" x="16.000000000000004" y="59" width="44.333333333333343" height="35"/>
                     <color key="tintColor" systemColor="labelColor"/>
                     <state key="normal" title="Button"/>
