@@ -12,6 +12,7 @@ class AboutUsViewController: UIViewController {
     @IBOutlet weak var githubLabel: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        setSwipeGesture()
         githubLabel.setTitle(NSLocalizedString("thisAppIsAnOpenSourceProject", comment: ""), for: .normal)
         // Do any additional setup after loading the view.
     }
@@ -25,14 +26,15 @@ class AboutUsViewController: UIViewController {
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setSwipeGesture() {
+        let swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture(_:)))
+        swipeGestureRecognizer.direction = .right
+        view.addGestureRecognizer(swipeGestureRecognizer)
     }
-    */
 
+    @objc func handleSwipeGesture(_ gestureRecognizer: UISwipeGestureRecognizer) {
+        if gestureRecognizer.direction == .right {
+            backButtonTapped(UIButton.self)
+        }
+    }
 }
