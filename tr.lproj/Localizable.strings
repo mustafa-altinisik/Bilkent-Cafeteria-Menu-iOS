@@ -76,4 +76,9 @@
 "savedWithNoModificationDetail" = "Bildiriminiz değişiklik olmadan kaydedildi.";
 
 "save" = "Kaydet";
+
+"energy" = "Enerji (k.cal.): ";
+"carbohydrate" = "Karbonhidrat: ";
+"protein" = "Protein: ";
+"fat" = "Yağ: ";
 */

@@ -76,4 +76,9 @@
 "savedWithNoModificationDetail" = "Your notification was saved without any modification.";
 
 "save" = "Save";
+
+"energy" = "Energy (Cal.): ";
+"carbohydrate" = "Carbohydrate: ";
+"protein" = "Protein: ";
+"fat" = "Fat: ";
 */
