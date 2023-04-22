@@ -124,4 +124,33 @@ class UserDefaultsManager{
         }
         UserDefaults.standard.set(notificationData, forKey: "notifications")
     }
+    
+    func changeNotificationActivness(_ notification: SingleNotification) {
+        guard var notifications = getNotifications(),
+              let index = notifications.firstIndex(of: notification) else {
+            return
+        }
+        
+        let updatedNotification = SingleNotification(
+            name: notification.name,
+            hour: notification.hour,
+            minute: notification.minute,
+            days: notification.days,
+            isOn: !notification.isOn // toggle the value of isOn
+        )
+        
+        removeNotification(notification)
+        addNotification(updatedNotification)
+    }
+    
+    func removeNotification(_ notification: SingleNotification) {
+        guard var notifications = getNotifications() else {
+            return
+        }
+        
+        if let index = notifications.firstIndex(of: notification) {
+            notifications.remove(at: index)
+            setNotifications(notifications)
+        }
+    }
 }
