@@ -22,6 +22,8 @@ class MainScreenViewController: UIViewController {
     @IBOutlet private weak var saturdayButton: UIButton!
     @IBOutlet private weak var sundayButton: UIButton!
     
+    let impactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
+
     var preferredLanguage = Locale(identifier: Locale.preferredLanguages.first ?? "en").language.languageCode?.identifier
     private var leftSideMenu = SideMenuNavigationController(rootViewController: SideMenuTableViewController())
 
@@ -35,6 +37,10 @@ class MainScreenViewController: UIViewController {
         configureDayButtons()
         setTableView()
         setLeftSideMenu()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        coursesTable.reloadData()
     }
     
     @IBAction func favoriteCoursesButtonTapped(_ sender: Any) {
@@ -246,6 +252,8 @@ class MainScreenViewController: UIViewController {
     }
 
     private func setMenuFor(dayOfTheWeek: Int, foodType: Int){
+        impactFeedbackGenerator.impactOccurred()
+        
         MenuManager.shared.returnMenuFor(day: dayOfTheWeek) { meals in
             if let meals = meals {
                 if foodType ==  1{//lunch
@@ -395,6 +403,7 @@ extension MainScreenViewController: UITableViewDataSource{
 
 extension MainScreenViewController: MealTableViewCellDelegate{
     func likeButtonTapped(for course: Course, rowNumber: [IndexPath]) {
+        impactFeedbackGenerator.impactOccurred()
         for indexPath in rowNumber {
             if let cell = coursesTable.cellForRow(at: indexPath) as? MealTableViewCell {
                 UserDefaultsManager.shared.addRemoveCourse(course: course)
@@ -409,6 +418,5 @@ extension MainScreenViewController: MealTableViewCellDelegate{
                 }
             }
         }
-        print(UserDefaultsManager.shared.getAllLikedCourses())
     }
 }
