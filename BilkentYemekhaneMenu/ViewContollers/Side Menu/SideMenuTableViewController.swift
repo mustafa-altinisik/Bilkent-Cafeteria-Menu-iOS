@@ -26,7 +26,7 @@ class SideMenuTableViewController: UITableViewController {
                 categoriesWithSystemImageNamesStruct(categoryId: 0, categoryNameToBeDisplayed: NSLocalizedString("likedCourses", comment: ""), categoryIcon: "heart"),
             ],
             [
-                categoriesWithSystemImageNamesStruct(categoryId: 1, categoryNameToBeDisplayed: NSLocalizedString("notificationSettings", comment: ""), categoryIcon: "bell"),
+                categoriesWithSystemImageNamesStruct(categoryId: 1, categoryNameToBeDisplayed: NSLocalizedString("notifications", comment: ""), categoryIcon: "bell"),
                 categoriesWithSystemImageNamesStruct(categoryId: 2, categoryNameToBeDisplayed: NSLocalizedString("darkMode", comment: ""), categoryIcon: "paintbrush"),
                 categoriesWithSystemImageNamesStruct(categoryId: 3, categoryNameToBeDisplayed: NSLocalizedString("language", comment: ""), categoryIcon: "globe"),
             ],
