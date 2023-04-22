@@ -18,4 +18,62 @@
 "fixedMenu" = "Fiks Menü";
 "alternativeMenu" = "Seçmeli Menü";
 "thisAppIsAnOpenSourceProject" = "Bu uygulama bir açık kaynak projedir.";
+"hereIsTheMenu" = "İşte menü:";
+"notifications" = "Bildirimler";
+"lunchNotification" = "Öğle Yemeği Bildirimi";
+"dinnerNotification" = "Akşam Menüsü Bildirimi";
+"lunch" = "Öğle Yemeği";
+"dinner" = "Akşam Yemeği";
+"everyday" = "Her gün";
+"weekDays" = "Hafta içi";
+"weekends" = "Hafta sonu";
+"mon" = "Pzt";
+"tue" = "Sal";
+"wed" = "Çar";
+"thu" = "Per";
+"fri" = "Cum";
+"sat" = "Cts";
+"sun" = "Pzr";
+"lunchMenu" = "Öğle Yemeği Menüsü:";
+"dinnerMenu" = "Akşam Yemeği Menüsü:";
+
+"notificationDetails" = "Bildirim Detayları";
+"Mon" = "P";
+"Tue" = "S";
+"Wed" = "Ç";
+"Thu" = "P";
+"Fri" = "C";
+"Sat" = "C";
+"Sun" = "P";
+"label" = "Etiket:";
+"notification" = "Bildirim";
+
+"modifyNotifications" = "Bildirimleri Düzenle";
+"noNotificationsExplain" = "Hiç bildiriminiz yok, eklemek için sağ üst köşedeki artı butonuna basın.";
+
+"notificationExistsDetail" = "Eklemeye çalıştığınız bildirim zaten mevcut.";
+"notificationExists" = "Bildirim Mevcut";
+"ok" = "Tamam";
+"error" = "Hata";
+"selectAtLeastOneDay" = "Bildirimi kaydetmek için en az bir gün seçin.";
+
+"mon" = "Pzt";
+"tue" = "Sal";
+"wed" = "Çar";
+"thu" = "Per";
+"fri" = "Cum";
+"sat" = "Cts";
+"sun" = "Pzr";
+
+"everyday" = "Her gün";
+"weekDays" = "Hafta içi";
+"weekends" = "Hafta sonu";
+
+"modifyNotification" = "Bildirimi Düzenle";
+"modifiedNotificationExistsDetail" = "Düzenlemeye çalıştığınız bildirim zaten mevcut.";
+
+"savedWithNoModification" = "Değişiklik Yok";
+"savedWithNoModificationDetail" = "Bildiriminiz değişiklik olmadan kaydedildi.";
+
+"save" = "Kaydet";
 */

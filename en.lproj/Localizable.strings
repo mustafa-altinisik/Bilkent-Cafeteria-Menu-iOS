@@ -18,4 +18,62 @@
 "fixedMenu" = "Fixed Menu";
 "alternativeMenu" = "Alternative Menu";
 "thisAppIsAnOpenSourceProject" = "This app is an open source project.";
+"hereIsTheMenu" = "Here is the menu:";
+"notifications" = "Notifications";
+"lunchNotification" = "Lunch Notification";
+"dinnerNotification" = "Dinner Notification";
+"lunch" = "Lunch";
+"dinner" = "Dinner";
+"everyday" = "Everyday";
+"weekDays" = "Weekdays";
+"weekends" = "Weekends";
+"mon" = "Mon";
+"tue" = "Tue";
+"wed" = "Wed";
+"thu" = "Thu";
+"fri" = "Fri";
+"sat" = "Sat";
+"sun" = "Sun";
+"lunchMenu" = "Lunch Menu:";
+"dinnerMenu" = "Dinner Menu:";
+
+"notificationDetails" = "Notification Details";
+"Mon" = "Mon";
+"Tue" = "Tue";
+"Wed" = "Wed";
+"Thu" = "Thu";
+"Fri" = "Fri";
+"Sat" = "Sat";
+"Sun" = "Sun";
+"label" = "Label:";
+"notification" = "Notification";
+
+"modifyNotifications" = "Modify Notifications";
+"noNotificationsExplain" = "You have no notifications, tap the plus button in the top right corner to add some.";
+
+"notificationExistsDetail" = "The notification you are trying to add already exists.";
+"notificationExists" = "Notification Exists";
+"ok" = "OK";
+"error" = "Error";
+"selectAtLeastOneDay" = "Please select at least one day to save the notification.";
+
+"mon" = "Mon";
+"tue" = "Tue";
+"wed" = "Wed";
+"thu" = "Thu";
+"fri" = "Fri";
+"sat" = "Sat";
+"sun" = "Sun";
+
+"everyday" = "Everyday";
+"weekDays" = "Weekdays";
+"weekends" = "Weekends";
+
+"modifyNotification" = "Modify Notification";
+"modifiedNotificationExistsDetail" = "The notification you are trying to modify already exists.";
+
+"savedWithNoModification" = "No Changes Made";
+"savedWithNoModificationDetail" = "Your notification was saved without any modification.";
+
+"save" = "Save";
 */
