@@ -27,8 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         if UserDefaultsManager.shared.getNotifications() == nil && UserDefaultsManager.shared.checkIfAppLaunchedForTheFirstTime(){
     
-            UserDefaultsManager.shared.addNotification(SingleNotification(name: NSLocalizedString("lunchMenu", comment: ""), hour: 11, minute: 30, days: [1, 1, 1, 1, 1, 0, 0], isOn: true))
-            UserDefaultsManager.shared.addNotification(SingleNotification(name: NSLocalizedString("dinnerMenu", comment: ""), hour: 16, minute: 30, days: [1, 1, 1, 1, 1, 0, 0], isOn: true))
+            UserDefaultsManager.shared.addNotification(SingleNotification(name: "lunch", hour: 11, minute: 30, days: [1, 1, 1, 1, 1, 0, 0], isOn: true))
+            UserDefaultsManager.shared.addNotification(SingleNotification(name: "dinner", hour: 16, minute: 30, days: [1, 1, 1, 1, 1, 0, 0], isOn: true))
         }
         
         NotificationManager.shared.setScheduledNotifications()
