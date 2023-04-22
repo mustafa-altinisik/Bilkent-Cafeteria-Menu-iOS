@@ -254,6 +254,12 @@ class MainScreenViewController: UIViewController {
     private func setMenuFor(dayOfTheWeek: Int, foodType: Int){
         impactFeedbackGenerator.impactOccurred()
         
+        var dayOfTheWeek = dayOfTheWeek
+        
+        if dayOfTheWeek == 0{
+            dayOfTheWeek = 7
+        }
+        
         MenuManager.shared.returnMenuFor(day: dayOfTheWeek) { meals in
             if let meals = meals {
                 if foodType ==  1{//lunch
@@ -284,6 +290,9 @@ extension MainScreenViewController: UITableViewDataSource{
         // Register the cell nib
         let nib = UINib(nibName: "MealTableViewCell", bundle: nil)
         coursesTable.register(nib, forCellReuseIdentifier: "courseCell")
+        
+        let nutritionCellNib = UINib(nibName: "NutritionFactsTableViewCell", bundle: nil)
+        coursesTable.register(nutritionCellNib, forCellReuseIdentifier: "nutritionFactsCell")
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -319,6 +328,20 @@ extension MainScreenViewController: UITableViewDataSource{
                         cell.likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
                     }
                 }
+            } else if indexPath.row == MainScreenViewController.fixedMeal?.courses.count {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "nutritionFactsCell", for: indexPath) as! NutritionFactsTableViewCell
+                cell.backgroundColor = .clear
+    
+                let fixedMeal = MainScreenViewController.fixedMeal
+                let facts = fixedMeal?.nutritionFacts
+                
+                cell.energyLabel.text = NSLocalizedString("energy", comment: "") + String(facts?["energy"] ?? "")
+                cell.carbonhydrateLabel.text = NSLocalizedString("carbohydrate", comment: "") + String(facts?["carbohydrate"] ?? "")
+                cell.proteinLabel.text = NSLocalizedString("protein", comment: "") + String(facts?["protein"] ?? "")
+                cell.fatLabel.text = NSLocalizedString("fat", comment: "") + String(facts?["fat"] ?? "")
+
+
+                return cell
             }
         }
         
@@ -356,6 +379,7 @@ extension MainScreenViewController: UITableViewDataSource{
     }
 
 
+
     func numberOfSections(in tableView: UITableView) -> Int {
         // Two sections: Fixed Menu and Alternative Menu
         return 2
@@ -367,7 +391,7 @@ extension MainScreenViewController: UITableViewDataSource{
             
             // Section 0: Fixed Menu
             if section == 0 {
-                return fixedCount
+                return fixedCount + 1 //An extra cell for nutrition facts.
             }
             
             // Section 1: Alternative Menu
@@ -396,7 +420,13 @@ extension MainScreenViewController: UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        if indexPath.section == 0 && indexPath.row == MainScreenViewController.fixedMeal?.courses.count {
+            // This is the nutrition facts cell in section 0
+            return 110
+        } else {
+            // All other cells
+            return UITableView.automaticDimension
+        }
     }
 }
 
