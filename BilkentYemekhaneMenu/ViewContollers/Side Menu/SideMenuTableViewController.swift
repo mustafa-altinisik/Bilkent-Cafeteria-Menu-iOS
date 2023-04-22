@@ -85,6 +85,10 @@ class SideMenuTableViewController: UITableViewController {
             let likedCoursesScreen = LikedCoursesViewController()
             likedCoursesScreen.modalPresentationStyle = .fullScreen
             present(likedCoursesScreen, animated: true, completion: nil)
+        case 1:
+            let notificationsScreen = ModifyNotificationsViewController()
+            notificationsScreen.modalPresentationStyle = .fullScreen
+            present(notificationsScreen, animated: true, completion: nil)
         case 3:
             let alertController = UIAlertController(title: NSLocalizedString("chooseALanguage", comment: ""), message: NSLocalizedString("appRestartMessage", comment: ""), preferredStyle: .actionSheet)
             if preferredLanguage == "tr" {
