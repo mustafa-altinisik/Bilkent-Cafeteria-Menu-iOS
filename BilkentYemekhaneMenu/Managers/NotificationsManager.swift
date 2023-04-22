@@ -33,8 +33,14 @@ class NotificationManager {
                     if day == 1 {
                         // Create the notification content
                         let content = UNMutableNotificationContent()
-                        content.title = NSLocalizedString("dailyHadith", comment: "")
-                        content.body = notification.name
+                        
+                        if notification.name == "lunch"{
+                            content.title = NSLocalizedString("lunchMenu", comment: "")
+                        }else{
+                            content.title = NSLocalizedString("dinnerMenu", comment: "")
+                        }
+                        
+                        content.body = "Buraya menü gelecek."//Will be replaced by the dates menu.
                         content.sound = UNNotificationSound.default
                         
                         var dateComponents = DateComponents()
