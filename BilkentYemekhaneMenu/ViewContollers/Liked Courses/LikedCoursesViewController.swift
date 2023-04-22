@@ -6,20 +6,15 @@
 //
 
 import UIKit
-
+let impactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
 var preferredLanguage = Locale(identifier: Locale.preferredLanguages.first ?? "en").language.languageCode?.identifier
 
 
-class LikedCoursesViewController: UIViewController, UITableViewDataSource, MealTableViewCellDelegate {
+class LikedCoursesViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var screenTitle: UILabel!
-    func likeButtonTapped(for course: Course, rowNumber: [IndexPath]) {
-        //
-    }
-    
-    let favoriteCourses = UserDefaultsManager.shared.getAllLikedCourses()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return favoriteCourses.count
+        return UserDefaultsManager.shared.getAllLikedCourses().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -27,7 +22,7 @@ class LikedCoursesViewController: UIViewController, UITableViewDataSource, MealT
         cell.backgroundColor = .clear
         cell.delegate = self
         
-        var favoriteCourse = favoriteCourses[indexPath.row]
+        let favoriteCourse = UserDefaultsManager.shared.getAllLikedCourses()[indexPath.row]
         cell.course = favoriteCourse
         cell.rowNumber = [indexPath]
         if preferredLanguage == "tr"{
@@ -55,7 +50,6 @@ class LikedCoursesViewController: UIViewController, UITableViewDataSource, MealT
         setSwipeGesture()
         setTableView()
         screenTitle.text = NSLocalizedString("likedCourses", comment: "")
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func backButtonTapped(_ sender: Any) {
@@ -83,3 +77,22 @@ class LikedCoursesViewController: UIViewController, UITableViewDataSource, MealT
         likedCoursesTableView.register(nib, forCellReuseIdentifier: "courseCell")
     }
 }
+
+extension LikedCoursesViewController: MealTableViewCellDelegate{
+    func likeButtonTapped(for course: Course, rowNumber: [IndexPath]) {
+        impactFeedbackGenerator.impactOccurred()
+
+        var indexPathsToDelete: [IndexPath] = []
+        
+        for indexPath in rowNumber {
+            if let cell = likedCoursesTableView.cellForRow(at: indexPath) as? MealTableViewCell {
+                if UserDefaultsManager.shared.isCourseInFavorites(course: course) {
+                    UserDefaultsManager.shared.addRemoveCourse(course: course)
+                    likedCoursesTableView.deleteRows(at: [indexPath], with: .automatic)
+                    likedCoursesTableView.reloadData()
+                }
+            }
+        }
+    }
+}
+
