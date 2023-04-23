@@ -212,7 +212,11 @@ class MainScreenViewController: UIViewController {
     
     private func configureDayButtons() {
         let dayButtons = [mondayButton, tuesdayButton, wednesdayButton, thursdayButton, fridayButton, saturdayButton, sundayButton]
-        let today = Calendar.current.component(.weekday, from: Date()) - 1
+        var today = Calendar.current.component(.weekday, from: Date()) - 1
+        
+        if today == 0{
+            today = 7
+        }
         
         for (index, button) in dayButtons.enumerated() {
             if index + 1 < today {
@@ -223,9 +227,17 @@ class MainScreenViewController: UIViewController {
     
     private func disableLunchDinnerButtonsIfNeeded(currentDay: Int) {
         let currentTime = Calendar.current.component(.hour, from: Date())
-        let today = Calendar.current.component(.weekday, from: Date()) - 1 // Convert Sunday (1) to 0 and Monday (2) to 1, etc.
+        var today = Calendar.current.component(.weekday, from: Date()) - 1 // Convert Sunday (1) to 0 and Monday (2) to 1, etc.
+               
+        if today == 0{
+            today = 7
+        }
+        var innerCurrentDay = currentDay
+        if innerCurrentDay == 0{
+            innerCurrentDay = 7
+        }
 
-        if currentDay < today {
+        if innerCurrentDay < today {
             // Selected day is before today
             lunchButton.tintColor = .gray
             dinnerButton.tintColor = .gray
@@ -377,8 +389,6 @@ extension MainScreenViewController: UITableViewDataSource{
         }
         return cell
     }
-
-
 
     func numberOfSections(in tableView: UITableView) -> Int {
         // Two sections: Fixed Menu and Alternative Menu
