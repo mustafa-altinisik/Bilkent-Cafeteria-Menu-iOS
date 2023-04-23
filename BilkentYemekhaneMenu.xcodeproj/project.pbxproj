@@ -14,6 +14,10 @@
 		167B40DB29F02A310096C73A /* SideMenuPredefinedCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B40DA29F02A310096C73A /* SideMenuPredefinedCategoryTableViewCell.swift */; };
 		167B40E329F0333F0096C73A /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B40E129F0333F0096C73A /* AboutUsViewController.swift */; };
 		167B40E429F0333F0096C73A /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167B40E229F0333F0096C73A /* AboutUsViewController.xib */; };
+		16F0510529F47FEB00DF35C9 /* ModifyNotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F0510329F47FEB00DF35C9 /* ModifyNotificationsViewController.xib */; };
+		16F0510629F47FEB00DF35C9 /* ModifyNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F0510429F47FEB00DF35C9 /* ModifyNotificationsViewController.swift */; };
+		16F0510A29F4803F00DF35C9 /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F0510829F4803F00DF35C9 /* NotificationsTableViewCell.swift */; };
+		16F0510B29F4803F00DF35C9 /* NotificationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F0510929F4803F00DF35C9 /* NotificationsTableViewCell.xib */; };
 		16F835D629ED6386007A29BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F835D529ED6386007A29BE /* AppDelegate.swift */; };
 		16F835D829ED6386007A29BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F835D729ED6386007A29BE /* SceneDelegate.swift */; };
 		16F835DA29ED6386007A29BE /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F835D929ED6386007A29BE /* MainScreenViewController.swift */; };
@@ -65,6 +69,10 @@
 		167B40E229F0333F0096C73A /* AboutUsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
 		167B40EE29F037970096C73A /* tr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = tr; path = tr.lproj/Main.storyboard; sourceTree = "<group>"; };
 		167B40F129F037F00096C73A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		16F0510329F47FEB00DF35C9 /* ModifyNotificationsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyNotificationsViewController.xib; sourceTree = "<group>"; };
+		16F0510429F47FEB00DF35C9 /* ModifyNotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyNotificationsViewController.swift; sourceTree = "<group>"; };
+		16F0510829F4803F00DF35C9 /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationsTableViewCell.swift; path = ../../../../../Downloads/NotificationsTableViewCell.swift; sourceTree = "<group>"; };
+		16F0510929F4803F00DF35C9 /* NotificationsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NotificationsTableViewCell.xib; path = ../../../../../Downloads/NotificationsTableViewCell.xib; sourceTree = "<group>"; };
 		16F835D229ED6386007A29BE /* BilkentYemekhaneMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BilkentYemekhaneMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F835D529ED6386007A29BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16F835D729ED6386007A29BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +163,32 @@
 			path = "Side Menu";
 			sourceTree = "<group>";
 		};
+		16F0510229F47FBD00DF35C9 /* Notifications Screen */ = {
+			isa = PBXGroup;
+			children = (
+				16F0510429F47FEB00DF35C9 /* ModifyNotificationsViewController.swift */,
+				16F0510329F47FEB00DF35C9 /* ModifyNotificationsViewController.xib */,
+			);
+			path = "Notifications Screen";
+			sourceTree = "<group>";
+		};
+		16F0510729F4802A00DF35C9 /* NotificationTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				16F0510829F4803F00DF35C9 /* NotificationsTableViewCell.swift */,
+				16F0510929F4803F00DF35C9 /* NotificationsTableViewCell.xib */,
+			);
+			path = NotificationTableViewCell;
+			sourceTree = "<group>";
+		};
+		16F0511229F5236400DF35C9 /* Launch Screens */ = {
+			isa = PBXGroup;
+			children = (
+				16F835E029ED6387007A29BE /* LaunchScreen.storyboard */,
+			);
+			path = "Launch Screens";
+			sourceTree = "<group>";
+		};
 		16F835C929ED6386007A29BE = {
 			isa = PBXGroup;
 			children = (
@@ -188,7 +222,6 @@
 				16F835D529ED6386007A29BE /* AppDelegate.swift */,
 				16F835D729ED6386007A29BE /* SceneDelegate.swift */,
 				16F835DE29ED6387007A29BE /* Assets.xcassets */,
-				16F835E029ED6387007A29BE /* LaunchScreen.storyboard */,
 				16F835E329ED6387007A29BE /* Info.plist */,
 			);
 			path = BilkentYemekhaneMenu;
@@ -214,6 +247,8 @@
 		16F8360529ED638E007A29BE /* ViewContollers */ = {
 			isa = PBXGroup;
 			children = (
+				16F0511229F5236400DF35C9 /* Launch Screens */,
+				16F0510229F47FBD00DF35C9 /* Notifications Screen */,
 				167B40D529F01A1A0096C73A /* Side Menu */,
 				16F8360629ED639A007A29BE /* Main Screen */,
 				16FE26DB29F07BE800483094 /* About Us Screen */,
@@ -234,6 +269,7 @@
 		16F8360729ED8FC4007A29BE /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				16F0510729F4802A00DF35C9 /* NotificationTableViewCell */,
 				16F8360C29ED8FE8007A29BE /* MealTableViewCell */,
 				167B40D429F012AB0096C73A /* NutritionFactsTableViewCell */,
 				167B40DA29F02A310096C73A /* SideMenuPredefinedCategoryTableViewCell.swift */,
@@ -412,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				167B40D329F012A40096C73A /* NutritionFactsTableViewCell.xib in Resources */,
+				16F0510529F47FEB00DF35C9 /* ModifyNotificationsViewController.xib in Resources */,
 				167B40E429F0333F0096C73A /* AboutUsViewController.xib in Resources */,
 				167B40D929F020890096C73A /* SideMenuTableViewController.xib in Resources */,
 				16F8360B29ED8FE1007A29BE /* MealTableViewCell.xib in Resources */,
@@ -420,6 +457,7 @@
 				16FE26D729F06EAF00483094 /* Localizable.strings in Resources */,
 				16F835DF29ED6387007A29BE /* Assets.xcassets in Resources */,
 				16F835DD29ED6386007A29BE /* Main.storyboard in Resources */,
+				16F0510B29F4803F00DF35C9 /* NotificationsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,8 +585,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16F0510A29F4803F00DF35C9 /* NotificationsTableViewCell.swift in Sources */,
 				167B40E329F0333F0096C73A /* AboutUsViewController.swift in Sources */,
 				167B40D229F012A40096C73A /* NutritionFactsTableViewCell.swift in Sources */,
+				16F0510629F47FEB00DF35C9 /* ModifyNotificationsViewController.swift in Sources */,
 				16F8361229EDC66F007A29BE /* NetworkManager.swift in Sources */,
 				167B40DB29F02A310096C73A /* SideMenuPredefinedCategoryTableViewCell.swift in Sources */,
 				16FE26DD29F091F900483094 /* UserDefaultsManager.swift in Sources */,
@@ -754,7 +794,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BilkentYemekhaneMenu/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -784,7 +824,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BilkentYemekhaneMenu/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
