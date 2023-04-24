@@ -7,11 +7,13 @@
 
 import UIKit
 
+//This protocol is used to pass the course and the row number of the cell to the delegate.
 protocol MealTableViewCellDelegate: AnyObject {
     func likeButtonTapped(for course: Course, rowNumber: [IndexPath])
 }
 
-class MealTableViewCell: UITableViewCell {
+//This cell is used to display the course name and the like button.
+final class MealTableViewCell: UITableViewCell {
     @IBOutlet weak var courseName: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     
@@ -21,15 +23,10 @@ class MealTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     @IBAction func likeButtonTapped(_ sender: Any) {
         guard let course = course else { return }
         delegate?.likeButtonTapped(for: course, rowNumber: rowNumber ?? [])
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
     }
 }

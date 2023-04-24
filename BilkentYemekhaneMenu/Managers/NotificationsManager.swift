@@ -8,7 +8,8 @@
 import Foundation
 import UserNotifications
 
-class NotificationManager {
+final class NotificationManager {
+    // Arrays for notification message content in Turkish and English
     let turkishBodies = [
         "Yemek menüsü hazır! 🎉",
         "Menümüz yeni güne hazır! 🍽️",
@@ -75,12 +76,17 @@ class NotificationManager {
         "Our menu is a culinary adventure waiting to be explored! 🗺️🍴",
         "Delicious food and great company await you at our restaurant! 🍽️👥"
     ]
-
+    
+    // Singleton instance of NotificationManager
     static let shared = NotificationManager()
+    
+    // Reference to the user notification center
     private let notificationCenter = UNUserNotificationCenter.current()
     
-    var preferredLanguage = Locale(identifier: Locale.preferredLanguages.first ?? "en").language.languageCode?.identifier
-
+    // Get the user's preferred language code
+    let languageCode = Locale(identifier: Locale.preferredLanguages.first ?? "en").languageCode ?? "en"
+    
+    // Function to set up scheduled notifications
     func setScheduledNotifications() {
         // Remove previously set notifications
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
@@ -95,27 +101,27 @@ class NotificationManager {
         var calendar = Calendar.current
         calendar.timeZone = TimeZone.current
         
+        // Iterate through the notifications and set them up
         for notification in notifications {
-            if notification.isOn{
+            if notification.isOn {
                 for (index, day) in notification.days.enumerated() {
                     if day == 1 {
                         // Create the notification content
                         let content = UNMutableNotificationContent()
                         
-                        if notification.name == "lunch"{
+                        // Set the notification title based on the type of meal
+                        if notification.name == "lunch" {
                             content.title = NSLocalizedString("lunchMenu", comment: "")
-                        }else{
+                        } else {
                             content.title = NSLocalizedString("dinnerMenu", comment: "")
                         }
                         
-                        if preferredLanguage == "tr"{
-                            content.body = turkishBodies.randomElement() ?? ""
-                        }else{
-                            content.body = englishBodies.randomElement() ?? ""
-                        }
+                        // Set the notification body based on the user's preferred language
+                        content.body = languageCode == "tr" ? turkishBodies.randomElement() ?? "" : englishBodies.randomElement() ?? ""
                         
                         content.sound = UNNotificationSound.default
                         
+                        // Set up the notification trigger with the appropriate date components
                         var dateComponents = DateComponents()
                         dateComponents.hour = notification.hour
                         dateComponents.minute = notification.minute
@@ -123,7 +129,9 @@ class NotificationManager {
                         
                         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
                         
+                        // Create a unique identifier for the notification request
                         let identifier = "\(notification.name)-Day:\(index + 1)-Hour:\(notification.hour)-Minute:\(notification.minute)"
+                        
                         // Create the notification request
                         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
                         

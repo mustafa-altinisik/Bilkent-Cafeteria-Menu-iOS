@@ -7,7 +7,8 @@
 
 import UIKit
 let impactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
-var preferredLanguage = Locale(identifier: Locale.preferredLanguages.first ?? "en").language.languageCode?.identifier
+
+let languageCode = Locale(identifier: Locale.preferredLanguages.first ?? "en").languageCode ?? "en"
 
 
 class LikedCoursesViewController: UIViewController, UITableViewDataSource {
@@ -25,7 +26,7 @@ class LikedCoursesViewController: UIViewController, UITableViewDataSource {
         let favoriteCourse = UserDefaultsManager.shared.getAllLikedCourses()[indexPath.row]
         cell.course = favoriteCourse
         cell.rowNumber = [indexPath]
-        if preferredLanguage == "tr"{
+        if languageCode == "tr"{
             cell.courseName.text = favoriteCourse.name
         }else{
             cell.courseName.text = favoriteCourse.englishName

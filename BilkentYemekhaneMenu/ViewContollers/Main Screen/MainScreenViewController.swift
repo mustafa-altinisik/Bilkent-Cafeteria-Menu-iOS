@@ -24,7 +24,7 @@ class MainScreenViewController: UIViewController {
     
     let impactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
 
-    var preferredLanguage = Locale(identifier: Locale.preferredLanguages.first ?? "en").language.languageCode?.identifier
+    let languageCode = Locale(identifier: Locale.preferredLanguages.first ?? "en").languageCode ?? "en"
     private var leftSideMenu = SideMenuNavigationController(rootViewController: SideMenuTableViewController())
 
     static var fixedMeal: Meal?
@@ -38,6 +38,7 @@ class MainScreenViewController: UIViewController {
         setTableView()
         setLeftSideMenu()
         NotificationManager.shared.setScheduledNotifications()
+        NotificationCenter.default.addObserver(self, selector: #selector(favoriteCoursesButtonTapped), name: Notification.Name("PresentLikedCoursesScreen"), object: nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -69,42 +70,22 @@ class MainScreenViewController: UIViewController {
         view.addGestureRecognizer(sideMenuSwipeGesture)
     }
     
-    private func setBorders(){
-        lunchButton.layer.borderWidth = 1.0
-        lunchButton.layer.borderColor = UIColor.black.cgColor
-        lunchButton.layer.cornerRadius = 5.0
-        
-        dinnerButton.layer.borderWidth = 1.0
-        dinnerButton.layer.borderColor = UIColor.black.cgColor
-        dinnerButton.layer.cornerRadius = 5.0
-        
-        mondayButton.layer.borderWidth = 1.0
-        mondayButton.layer.borderColor = UIColor.black.cgColor
-        mondayButton.layer.cornerRadius = 5.0
-        
-        tuesdayButton.layer.borderWidth = 1.0
-        tuesdayButton.layer.borderColor = UIColor.black.cgColor
-        tuesdayButton.layer.cornerRadius = 5.0
-        
-        wednesdayButton.layer.borderWidth = 1.0
-        wednesdayButton.layer.borderColor = UIColor.black.cgColor
-        wednesdayButton.layer.cornerRadius = 5.0
-        
-        thursdayButton.layer.borderWidth = 1.0
-        thursdayButton.layer.borderColor = UIColor.black.cgColor
-        thursdayButton.layer.cornerRadius = 5.0
-        
-        fridayButton.layer.borderWidth = 1.0
-        fridayButton.layer.borderColor = UIColor.black.cgColor
-        fridayButton.layer.cornerRadius = 5.0
-        
-        saturdayButton.layer.borderWidth = 1.0
-        saturdayButton.layer.borderColor = UIColor.black.cgColor
-        saturdayButton.layer.cornerRadius = 5.0
-        
-        sundayButton.layer.borderWidth = 1.0
-        sundayButton.layer.borderColor = UIColor.black.cgColor
-        sundayButton.layer.cornerRadius = 5.0
+    private func setButtonBorder(button: UIButton) {
+        button.layer.borderWidth = 1.0
+        button.layer.borderColor = UIColor.black.cgColor
+        button.layer.cornerRadius = 5.0
+    }
+
+    private func setBorders() {
+        setButtonBorder(button: lunchButton)
+        setButtonBorder(button: dinnerButton)
+        setButtonBorder(button: mondayButton)
+        setButtonBorder(button: tuesdayButton)
+        setButtonBorder(button: wednesdayButton)
+        setButtonBorder(button: thursdayButton)
+        setButtonBorder(button: fridayButton)
+        setButtonBorder(button: saturdayButton)
+        setButtonBorder(button: sundayButton)
     }
 
     @IBAction func lunchButtonTapped(_ sender: Any) {
@@ -321,7 +302,7 @@ extension MainScreenViewController: UITableViewDataSource{
                 cell.course = course
                 cell.rowNumber = [indexPath]
                 
-                if preferredLanguage == "tr"{
+                if languageCode == "tr"{
                     cell.courseName.text = course.name
                 }else{
                     cell.courseName.text = course.englishName
@@ -366,7 +347,7 @@ extension MainScreenViewController: UITableViewDataSource{
                 cell.course = course
                 cell.rowNumber = [indexPath]
                 
-                if preferredLanguage == "tr"{
+                if languageCode == "tr"{
                     cell.courseName.text = course.name
                 }else{
                     cell.courseName.text = course.englishName

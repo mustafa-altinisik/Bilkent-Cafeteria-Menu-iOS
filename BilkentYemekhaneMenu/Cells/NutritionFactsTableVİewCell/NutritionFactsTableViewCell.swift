@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NutritionFactsTableViewCell: UITableViewCell {
+final class NutritionFactsTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var energyLabel: UILabel!

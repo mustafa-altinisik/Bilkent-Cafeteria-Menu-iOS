@@ -7,11 +7,18 @@
 
 import Foundation
 
-class UserDefaultsManager{
+// A class to manage user defaults
+final class UserDefaultsManager {
     
-    static let shared = UserDefaultsManager() // create a static instance variable
+    // Singleton instance of UserDefaultsManager
+    static let shared = UserDefaultsManager()
+    
+    // Private initializer to ensure only one instance is created
     private init() { }
     
+    // MARK: - Course related functions
+    
+    // Add or remove a course from the list of liked courses
     func addRemoveCourse(course: Course) {
         var likedCourses = UserDefaults.standard.array(forKey: "likedCourses") as? [Data] ?? []
         
@@ -27,8 +34,17 @@ class UserDefaultsManager{
             }
         }
         UserDefaults.standard.set(likedCourses, forKey: "likedCourses")
+        NetworkManager.shared.sendFavorite(){ result in
+            switch result {
+            case .success:
+                print("Liked course successfully sent.")
+            case .failure(_):
+                print("Liked course cannot sent.")
+            }
+        }
     }
     
+    // Check if a course is in the list of liked courses
     func isCourseInFavorites(course: Course) -> Bool {
         let likedCourses = UserDefaults.standard.array(forKey: "likedCourses") as? [Data] ?? []
         
@@ -40,6 +56,7 @@ class UserDefaultsManager{
         }
     }
     
+    // Get all liked courses
     func getAllLikedCourses() -> [Course] {
         let decoder = JSONDecoder()
         let likedCourseData = UserDefaults.standard.array(forKey: "likedCourses") as? [Data] ?? []
@@ -52,8 +69,17 @@ class UserDefaultsManager{
         }
         return likedCourses
     }
-
     
+    // Get all liked courses' id's
+    func getAllLikedCourseIds() -> [Int] {
+        let likedCourses = getAllLikedCourses()
+        let likedCourseIds = likedCourses.map { $0.id }
+        return likedCourseIds
+    }
+
+    // MARK: - Notification related functions
+    
+    // Get all notifications
     func getNotifications() -> [SingleNotification]? {
         guard let notificationData = UserDefaults.standard.array(forKey: "notifications") as? [[String: Any]] else {
             return nil
@@ -81,17 +107,7 @@ class UserDefaultsManager{
         return notifications
     }
     
-    func checkIfAppLaunchedForTheFirstTime() -> Bool {
-        let userDefaults = UserDefaults.standard
-        
-        if userDefaults.bool(forKey: "isAppLaunchedForTheFirstTime") {
-            return false
-        } else {
-            userDefaults.set(true, forKey: "isAppLaunchedForTheFirstTime")
-            return true
-        }
-    }
-    
+    // Add a new notification
     func addNotification(_ notification: SingleNotification) {
         if !checkNotification(notification) {
             var notifications = getNotifications() ?? []
@@ -100,6 +116,7 @@ class UserDefaultsManager{
         }
     }
     
+    // Check if a notification already exists
     func checkNotification(_ notification: SingleNotification) -> Bool {
         guard let notifications = getNotifications() else {
             return false
@@ -112,6 +129,7 @@ class UserDefaultsManager{
         return false
     }
     
+    // Update the list of notifications
     func setNotifications(_ notifications: [SingleNotification]) {
         let notificationData = notifications.map { notification in
             return [
@@ -125,6 +143,7 @@ class UserDefaultsManager{
         UserDefaults.standard.set(notificationData, forKey: "notifications")
     }
     
+    // Toggle the activation status of a notification
     func changeNotificationActivness(_ notification: SingleNotification) {
         guard var notifications = getNotifications(),
               let index = notifications.firstIndex(of: notification) else {
@@ -143,6 +162,7 @@ class UserDefaultsManager{
         addNotification(updatedNotification)
     }
     
+    // Remove a notification
     func removeNotification(_ notification: SingleNotification) {
         guard var notifications = getNotifications() else {
             return
@@ -152,5 +172,23 @@ class UserDefaultsManager{
             notifications.remove(at: index)
             setNotifications(notifications)
         }
+    }
+    
+    // MARK: - App launch related functions
+    
+    // Check if the app is launched for the first time
+    func checkIfAppLaunchedForTheFirstTime() -> Bool {
+        let userDefaults = UserDefaults.standard
+        
+        if userDefaults.bool(forKey: "isAppLaunchedForTheFirstTime") {
+            return false
+        } else {
+            userDefaults.set(true, forKey: "isAppLaunchedForTheFirstTime")
+            return true
+        }
+    }
+    
+    func getUniqueId() -> String? {
+        return UserDefaults.standard.string(forKey: "uniqueId")
     }
 }

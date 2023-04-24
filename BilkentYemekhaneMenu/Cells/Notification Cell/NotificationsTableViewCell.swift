@@ -11,7 +11,8 @@ protocol NotificationsTableViewCellDelegate: AnyObject {
     func switchDidChangeState(for notification: SingleNotification)
 }
 
-class NotificationsTableViewCell: UITableViewCell {
+//This cell is used to display the notification name, days and time and a switch to turn the notification on or off.
+final class NotificationsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var detailsLabel: UILabel!
@@ -20,18 +21,11 @@ class NotificationsTableViewCell: UITableViewCell {
     var notification: SingleNotification?
     weak var delegate: NotificationsTableViewCellDelegate?
 
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
+    //The function is used to turn the notification on or off.
     @IBAction func switchValueChanged(_ sender: Any) {
         guard let notification = notification else { return }
         delegate?.switchDidChangeState(for: notification)
