@@ -37,6 +37,7 @@ class MainScreenViewController: UIViewController {
         configureDayButtons()
         setTableView()
         setLeftSideMenu()
+        NotificationManager.shared.setScheduledNotifications()
     }
 
     override func viewWillAppear(_ animated: Bool) {
