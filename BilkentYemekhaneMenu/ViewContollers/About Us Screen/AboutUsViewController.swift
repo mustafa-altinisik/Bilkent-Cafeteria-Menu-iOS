@@ -21,7 +21,7 @@ class AboutUsViewController: UIViewController {
         dismiss(animated: true)
     }
     @IBAction func githubButtonTapped(_ sender: Any) {
-        if let url = URL(string: "https://github.com/mustafa-altinisik/Bilkent-Cafeteria-Menu-iOS") {
+        if let url = URL(string: "https://github.com/yibudak/Bilkent-Cafeteria-Menu") {
             UIApplication.shared.open(url)
         }
     }
