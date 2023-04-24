@@ -8,10 +8,10 @@
 "likedCourses" = "Liked Courses";
 "notificationSettings" = "Notification Settings";
 "darkMode" = "Dark Mode";
-"language" = "Language";
+"language" = "Language / Dil";
 "aboutUs" = "About Us";
-"chooseALanguage" = "Choose a language.";
-"appRestartMessage" = "You need to restart the app after changing the language.";
+"chooseALanguage" = "Bir dil seçin.";
+"appRestartMessage" = "Dili değiştirdikten sonra uygulamayı yeniden açmanız gerekecektir.";
 "cancel" = "Cancel";
 "settings" = "Settings";
 "extras" = "Extras";

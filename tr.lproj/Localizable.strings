@@ -8,10 +8,10 @@
 "likedCourses" = "Beğendiğim Yemekler";
 "notificationSettings" = "Bildirim Ayarları";
 "darkMode" = "Koyu Tema";
-"language" = "Dil";
+"language" = "Dil / Language";
 "aboutUs" = "Hakkımızda";
-"chooseALanguage" = "Bir dil seçin.";
-"appRestartMessage" = "Dili değiştirdikten sonra uygulamayı yeniden açmanız gerekecektir.";
+"chooseALanguage" = "Choose a language.";
+"appRestartMessage" = "You need to restart the app after changing the language.";
 "cancel" = "İptal";
 "settings" = "Ayarlar";
 "extras" = "Ekstralar";
