@@ -139,24 +139,8 @@ class SideMenuTableViewController: UITableViewController {
         let defaults = UserDefaults.standard
         defaults.set([language], forKey: "AppleLanguages")
         defaults.synchronize()
-        
-        // Restart the app to apply the language change
         exit(EXIT_SUCCESS)
     }
-    
-//    @objc func switchValueDidChange(_ sender: UISwitch) {
-//        if sender.isOn {
-//            // Set app theme to dark
-//            UIApplication.shared.windows.forEach { window in
-//                window.overrideUserInterfaceStyle = .dark
-//            }
-//        } else {
-//            // Set app theme to light
-//            UIApplication.shared.windows.forEach { window in
-//                window.overrideUserInterfaceStyle = .light
-//            }
-//        }
-//    }
     
     @objc func switchValueDidChange(_ sender: UISwitch) {
         let animationDuration: TimeInterval = 0.3
