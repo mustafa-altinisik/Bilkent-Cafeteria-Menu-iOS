@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutUsViewController" customModule="BilkentYemekhaneMenu" customModuleProvider="target">
             <connections>
                 <outlet property="githubLabel" destination="Bkw-bZ-0eq" id="5wa-4x-JmK"/>
+                <outlet property="nonOfficialLabel" destination="aaz-kh-cxp" id="tqf-G4-Obb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -59,6 +60,12 @@
                         <action selector="backButtonTapped:" destination="-1" eventType="touchUpInside" id="gqZ-wf-hIc"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not an official app." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaz-kh-cxp" userLabel="nonOfficial">
+                    <rect key="frame" x="150.66666666666666" y="602" width="91.666666666666657" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -68,10 +75,12 @@
                 <constraint firstItem="Bkw-bZ-0eq" firstAttribute="top" secondItem="joC-Nb-hxS" secondAttribute="bottom" constant="16" id="GJi-f3-KvP"/>
                 <constraint firstItem="AGn-Ba-hhg" firstAttribute="top" secondItem="DYy-LV-Dq9" secondAttribute="bottom" constant="8" symbolic="YES" id="HT6-mm-kPd"/>
                 <constraint firstItem="AGn-Ba-hhg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="N44-Xq-mZY"/>
+                <constraint firstItem="aaz-kh-cxp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OKw-jX-baM"/>
                 <constraint firstItem="DYy-LV-Dq9" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="QfR-df-whG"/>
                 <constraint firstItem="joC-Nb-hxS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VCc-TO-KkN"/>
                 <constraint firstItem="EXt-xB-slt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="W82-ed-zNY"/>
                 <constraint firstItem="EXt-xB-slt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="gou-gi-G22"/>
+                <constraint firstItem="aaz-kh-cxp" firstAttribute="top" secondItem="Bkw-bZ-0eq" secondAttribute="bottom" constant="8" symbolic="YES" id="uPc-jT-2PC"/>
                 <constraint firstItem="LBS-u4-usa" firstAttribute="top" secondItem="AGn-Ba-hhg" secondAttribute="bottom" constant="8" symbolic="YES" id="vaf-dB-kHR"/>
                 <constraint firstItem="DYy-LV-Dq9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yDa-OY-4z9"/>
                 <constraint firstItem="LBS-u4-usa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zkV-X8-Lcc"/>

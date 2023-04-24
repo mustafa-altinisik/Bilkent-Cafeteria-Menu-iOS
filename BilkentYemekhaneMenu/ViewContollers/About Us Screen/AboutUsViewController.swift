@@ -10,10 +10,12 @@ import UIKit
 class AboutUsViewController: UIViewController {
 
     @IBOutlet weak var githubLabel: UIButton!
+    @IBOutlet weak var nonOfficialLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         setSwipeGesture()
         githubLabel.setTitle(NSLocalizedString("thisAppIsAnOpenSourceProject", comment: ""), for: .normal)
+        nonOfficialLabel.text = NSLocalizedString("nonOfficial", comment: "")
         // Do any additional setup after loading the view.
     }
 
