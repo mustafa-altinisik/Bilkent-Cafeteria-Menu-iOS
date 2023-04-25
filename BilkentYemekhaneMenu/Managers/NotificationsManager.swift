@@ -40,9 +40,7 @@ final class NotificationManager {
         "Yemeklerimizle kendinizi ödüllendirin! 🏆🍽️",
         "Yemekler hazır, sofralar kuruldu! 🍽️",
         "Yemeklerimiz servise hazır! Afiyet olsun! 🍴",
-        "Menümüzü gördünüz mü? 👀",
-        "Lezzet dolu bir menü sizi bekliyor! 😋",
-        "Yemek listesi güncellendi! 🆕"
+        "Menümüzü gördünüz mü? 👀"
     ]
     
     let englishBodies = [
@@ -61,13 +59,9 @@ final class NotificationManager {
         "The menu for today has arrived! 📜",
         "Today's specials are here! 🍲",
         "Fresh menu for today is ready! 🌿",
-        "Treat yourself to our delicious dishes! 🍝🍔🍣",
         "Our menu is full of mouthwatering options! 🤤🍴",
         "Satisfy your cravings with our tasty meals! 😋",
-        "Our chefs have prepared a delectable menu for you! 👩‍🍳👨‍🍳",
-        "Enjoy a delightful meal with us today! 🥘🍲🍛",
         "The perfect meal awaits you! 🍽️😍",
-        "We've got something for everyone on our menu! 🍕🥗🍱",
         "Come and try our new dishes! 🆕🍴",
         "Don't miss out on our daily specials! 🌟🍽️",
         "Our menu is guaranteed to satisfy! 😌👌",
@@ -75,7 +69,7 @@ final class NotificationManager {
         "It's time to indulge in some mouthwatering food! 🤤🍔🍟",
         "Our menu is a culinary adventure waiting to be explored! 🗺️🍴",
         "Delicious food and great company await you at our restaurant! 🍽️👥"
-    ]
+      ]
     
     // Singleton instance of NotificationManager
     static let shared = NotificationManager()
@@ -108,13 +102,7 @@ final class NotificationManager {
                     if day == 1 {
                         // Create the notification content
                         let content = UNMutableNotificationContent()
-                        
-                        // Set the notification title based on the type of meal
-                        if notification.name == "lunch" {
-                            content.title = NSLocalizedString("lunchMenu", comment: "")
-                        } else {
-                            content.title = NSLocalizedString("dinnerMenu", comment: "")
-                        }
+                        content.title = NSLocalizedString("appName", comment: "")
                         
                         // Set the notification body based on the user's preferred language
                         content.body = languageCode == "tr" ? turkishBodies.randomElement() ?? "" : englishBodies.randomElement() ?? ""
