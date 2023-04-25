@@ -376,6 +376,20 @@ extension MainScreenViewController: UITableViewDataSource{
         // Two sections: Fixed Menu and Alternative Menu
         return 2
     }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        // Section 0: Fixed Menu
+        if section == 0 {
+            return NSLocalizedString("fixedMenu", comment: "")
+        }
+        
+        // Section 1: Alternative Menu
+        if section == 1 {
+            return NSLocalizedString("alternativeMenu", comment: "")
+        }
+        
+        return nil
+    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let fixedCount = MainScreenViewController.fixedMeal?.courses.count,
@@ -396,21 +410,6 @@ extension MainScreenViewController: UITableViewDataSource{
         return 0
     }
 
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        // Section 0: Fixed Menu
-        if section == 0 {
-            return NSLocalizedString("fixedMenu", comment: "")
-        }
-        
-        // Section 1: Alternative Menu
-        if section == 1 {
-            return NSLocalizedString("alternativeMenu", comment: "")
-        }
-        
-        return nil
-    }
-    
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 && indexPath.row == MainScreenViewController.fixedMeal?.courses.count {
             // This is the nutrition facts cell in section 0
@@ -423,22 +422,18 @@ extension MainScreenViewController: UITableViewDataSource{
 }
 
 
-extension MainScreenViewController: MealTableViewCellDelegate{
+extension MainScreenViewController: MealTableViewCellDelegate {
     func likeButtonTapped(for course: Course, rowNumber: [IndexPath]) {
         impactFeedbackGenerator.impactOccurred()
         for indexPath in rowNumber {
             if let cell = coursesTable.cellForRow(at: indexPath) as? MealTableViewCell {
                 UserDefaultsManager.shared.addRemoveCourse(course: course)
-                if cell.likeButton.currentImage == UIImage(systemName: "heart.fill") {
-                    DispatchQueue.main.async {
-                        cell.likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        cell.likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-                    }
-                }
+                let newImage = cell.likeButton.currentImage == UIImage(systemName: "heart.fill") ? UIImage(systemName: "heart") : UIImage(systemName: "heart.fill")
+                UIView.transition(with: cell.likeButton, duration: 0.2, options: .transitionCrossDissolve, animations: {
+                    cell.likeButton.setImage(newImage, for: .normal)
+                }, completion: nil)
             }
         }
     }
 }
+
