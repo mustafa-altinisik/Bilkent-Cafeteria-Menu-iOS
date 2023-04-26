@@ -354,7 +354,7 @@ extension MainScreenViewController: UITableViewDataSource{
                 }
                 
                 // Add a "Ⓥ" character if the course name contains "Vegan"
-                if course.name.contains("Vegan") {
+                if course.name.contains("Vegan") || course.name.contains("Vejetaryen"){
                     cell.courseName.text?.append(" 🌱")
                 }
                 

@@ -140,7 +140,7 @@ class SideMenuTableViewController: UITableViewController {
         guard let sharedDefaults = UserDefaults(suiteName: "group.altinisik.mustafa.BilkentYemekhaneMenu") else { return }
         sharedDefaults.set(language, forKey: "SelectedLanguage")
         sharedDefaults.synchronize()
-        MenuManager.shared.updateLanguageAndRefreshWidget()
+        MenuManager.shared.refreshWidget()
         defaults.synchronize()
     }
     

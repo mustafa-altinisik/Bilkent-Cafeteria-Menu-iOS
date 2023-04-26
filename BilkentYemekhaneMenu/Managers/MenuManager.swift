@@ -53,7 +53,7 @@ final class MenuManager {
         }
     }
     
-    func updateLanguageAndRefreshWidget() {
+    func refreshWidget() {
         if #available(iOS 14.0, *) {
             WidgetCenter.shared.reloadAllTimelines()
         }

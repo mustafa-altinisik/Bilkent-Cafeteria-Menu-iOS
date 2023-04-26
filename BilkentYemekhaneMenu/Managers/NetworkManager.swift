@@ -45,6 +45,7 @@ final class NetworkManager {
     }
     
     func sendFavorite(completion: @escaping (Result<Void, Error>) -> Void) {
+        MenuManager.shared.refreshWidget()
         let url = "https://bilkent.gunlukhadis.com/postFavorite"
         let parameters: [String: Any] = [
             "apiKey": "97a5a98437",

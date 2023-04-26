@@ -8,8 +8,9 @@ struct BilkentYemekhaneWidget: Widget {
         StaticConfiguration(kind: kind, provider: MyProvider()) { entry in
             MyWidgetView(entry: entry, courses: entry.courses, languageCode: entry.languageCode, currentTime: entry.currentTime)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Bilkent Menu Widget")
+        .description(NSLocalizedString("widgetDescription", comment: ""))
+        .supportedFamilies([.systemMedium])
     }
 }
 
@@ -97,11 +98,11 @@ struct MyWidgetView: View {
                     Text("•")
                         .font(.system(size: 16))
                     if languageCode == "tr" {
-                        Text(course.name)
+                        Text(courseNameWithSymbol(course: course))
                             .fixedSize(horizontal: false, vertical: true)
                             .font(.system(size: 16))
                     } else {
-                        Text(course.englishName)
+                        Text(courseEnglishNameWithSymbol(course: course))
                             .fixedSize(horizontal: false, vertical: true)
                             .font(.system(size: 16))
                     }
@@ -109,6 +110,24 @@ struct MyWidgetView: View {
             }
         }
         .padding()
+    }
+    
+    func courseNameWithSymbol(course: Course) -> String {
+        var name = course.name
+        if course.name.contains("Vegan") || course.name.contains("Vejetaryen") {
+            name.append(" 🌱")
+        }
+        
+        return name
+    }
+
+    func courseEnglishNameWithSymbol(course: Course) -> String {
+        var englishName = course.englishName
+        if course.name.contains("Vegan") || course.name.contains("Vejetaryen") {
+            englishName.append(" 🌱")
+        }
+
+        return englishName
     }
     
     func headerText() -> String {
@@ -123,7 +142,7 @@ struct MyWidgetView: View {
 
 struct MyWidget_Previews: PreviewProvider {
     static var previews: some View {
-        MyWidgetView(entry: MyEntry(date: Date(), courses: [], languageCode: "en", currentTime: 0), courses: [], languageCode: "en", currentTime: 0)
+        MyWidgetView(entry: MyEntry(date: Date(), courses: [Course(englishName: "Red Lentil Soup", id: 1, name: "Kırmızı Mercimek Çorbası")], languageCode: "tr", currentTime: 0), courses: [Course(englishName: "Red Lentil Soup", id: 1, name: "Kırmızı Mercimek Çorbası")], languageCode: "tr", currentTime: 0)
             .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }
