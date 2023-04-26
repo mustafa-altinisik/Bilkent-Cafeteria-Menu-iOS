@@ -8,6 +8,11 @@ target 'BilkentYemekhaneMenu' do
   # Pods for BilkentYemekhaneMenu
     pod 'SideMenu'
     pod 'Alamofire'
+    
+  target 'BilkentYemekhaneWidgetExtension' do
+    inherit! :search_paths
+  end
+    
   target 'BilkentYemekhaneMenuTests' do
     inherit! :search_paths
     # Pods for testing

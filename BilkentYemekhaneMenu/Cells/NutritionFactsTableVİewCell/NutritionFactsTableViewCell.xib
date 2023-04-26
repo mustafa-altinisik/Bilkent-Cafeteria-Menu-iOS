@@ -17,29 +17,29 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VbC-h4-R9M">
-                        <rect key="frame" x="16" y="12" width="92.333333333333329" height="92"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="U4t-9X-237">
+                        <rect key="frame" x="16" y="12" width="288" height="86"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Energy (Cal.):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Y9-qA-z6s" userLabel="energy">
-                                <rect key="frame" x="0.0" y="0.0" width="88" height="17"/>
+                                <rect key="frame" x="0.0" y="0.0" width="88" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carbohydrate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcT-Mm-Z5K" userLabel="carbonhydrate">
-                                <rect key="frame" x="0.0" y="25" width="92.333333333333329" height="17"/>
+                                <rect key="frame" x="0.0" y="24" width="92.333333333333329" height="15.666666666666664"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byF-BR-oRb" userLabel="nutritionFactsLabel">
-                                <rect key="frame" x="0.0" y="50" width="50" height="17"/>
+                                <rect key="frame" x="0.0" y="47.666666666666664" width="50" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fat:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLl-1a-m9k" userLabel="nutritionFactsLabel">
-                                <rect key="frame" x="0.0" y="75" width="24" height="17"/>
+                                <rect key="frame" x="0.0" y="71.666666666666671" width="24" height="14.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -48,9 +48,10 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="VbC-h4-R9M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="5UW-yq-3gd"/>
-                    <constraint firstAttribute="bottom" secondItem="VbC-h4-R9M" secondAttribute="bottom" constant="6" id="vBm-kG-lDJ"/>
-                    <constraint firstItem="VbC-h4-R9M" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="yoE-fb-XqS"/>
+                    <constraint firstAttribute="bottom" secondItem="U4t-9X-237" secondAttribute="bottom" constant="12" id="IgM-iu-Sr5"/>
+                    <constraint firstAttribute="trailing" secondItem="U4t-9X-237" secondAttribute="trailing" constant="16" id="Lb8-VR-xFV"/>
+                    <constraint firstItem="U4t-9X-237" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="it5-OT-Z1W"/>
+                    <constraint firstItem="U4t-9X-237" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="kvr-26-Pfr"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

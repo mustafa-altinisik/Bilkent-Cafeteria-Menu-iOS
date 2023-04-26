@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import WidgetKit
 
 // A class to manage menu data
 final class MenuManager {
@@ -49,6 +50,12 @@ final class MenuManager {
                     completion(menu[day - 1])
                 }
             }
+        }
+    }
+    
+    func updateLanguageAndRefreshWidget() {
+        if #available(iOS 14.0, *) {
+            WidgetCenter.shared.reloadAllTimelines()
         }
     }
 }

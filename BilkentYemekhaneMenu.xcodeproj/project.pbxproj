@@ -14,6 +14,12 @@
 		167B40DB29F02A310096C73A /* SideMenuPredefinedCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B40DA29F02A310096C73A /* SideMenuPredefinedCategoryTableViewCell.swift */; };
 		167B40E329F0333F0096C73A /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B40E129F0333F0096C73A /* AboutUsViewController.swift */; };
 		167B40E429F0333F0096C73A /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167B40E229F0333F0096C73A /* AboutUsViewController.xib */; };
+		16E463CA29F7FF8E00895AE8 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E463C929F7FF8E00895AE8 /* WidgetKit.framework */; };
+		16E463CC29F7FF8F00895AE8 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E463CB29F7FF8E00895AE8 /* SwiftUI.framework */; };
+		16E463CF29F7FF8F00895AE8 /* BilkentYemekhaneWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E463CE29F7FF8F00895AE8 /* BilkentYemekhaneWidgetBundle.swift */; };
+		16E463D129F7FF8F00895AE8 /* BilkentYemekhaneWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E463D029F7FF8F00895AE8 /* BilkentYemekhaneWidget.swift */; };
+		16E463D329F7FF9000895AE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16E463D229F7FF9000895AE8 /* Assets.xcassets */; };
+		16E463D729F7FF9000895AE8 /* BilkentYemekhaneWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 16E463C829F7FF8E00895AE8 /* BilkentYemekhaneWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		16F0510529F47FEB00DF35C9 /* ModifyNotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F0510329F47FEB00DF35C9 /* ModifyNotificationsViewController.xib */; };
 		16F0510629F47FEB00DF35C9 /* ModifyNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F0510429F47FEB00DF35C9 /* ModifyNotificationsViewController.swift */; };
 		16F0510A29F4803F00DF35C9 /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F0510829F4803F00DF35C9 /* NotificationsTableViewCell.swift */; };
@@ -31,18 +37,31 @@
 		16F8360B29ED8FE1007A29BE /* MealTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F8360929ED8FE1007A29BE /* MealTableViewCell.xib */; };
 		16F8360F29EDBF8C007A29BE /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8360E29EDBF8C007A29BE /* Models.swift */; };
 		16F8361229EDC66F007A29BE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8361129EDC66F007A29BE /* NetworkManager.swift */; };
+		16F9939429F800C10016FD43 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8361129EDC66F007A29BE /* NetworkManager.swift */; };
+		16F9939529F800C40016FD43 /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE26E229F12A5600483094 /* MenuManager.swift */; };
+		16F9939629F800D80016FD43 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8360E29EDBF8C007A29BE /* Models.swift */; };
+		16F9939729F800DE0016FD43 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE26DC29F091F900483094 /* UserDefaultsManager.swift */; };
+		16F9939829F808580016FD43 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16FE26D929F06EAF00483094 /* Localizable.strings */; };
 		16FE26D729F06EAF00483094 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16FE26D929F06EAF00483094 /* Localizable.strings */; };
 		16FE26DD29F091F900483094 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE26DC29F091F900483094 /* UserDefaultsManager.swift */; };
 		16FE26E029F094CB00483094 /* LikedCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE26DE29F094CB00483094 /* LikedCoursesViewController.swift */; };
 		16FE26E129F094CB00483094 /* LikedCoursesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16FE26DF29F094CB00483094 /* LikedCoursesViewController.xib */; };
 		16FE26E329F12A5700483094 /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE26E229F12A5600483094 /* MenuManager.swift */; };
 		16FE26E529F1722500483094 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE26E429F1722500483094 /* NotificationsManager.swift */; };
+		9F5EC6DE9B184A18D3EAD522 /* Pods_BilkentYemekhaneWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3602034B2EA30C844D683362 /* Pods_BilkentYemekhaneWidgetExtension.framework */; };
 		A4A6BFE62D9EB09F25238BD7 /* Pods_BilkentYemekhaneMenuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A95879172F2CD162079E25 /* Pods_BilkentYemekhaneMenuTests.framework */; };
 		AEC191A7AB5700F3E923D97B /* Pods_BilkentYemekhaneMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A914EDDE7E1B040342E841 /* Pods_BilkentYemekhaneMenu.framework */; };
 		D0A5478B960C2088B9DC2DD3 /* Pods_BilkentYemekhaneMenu_BilkentYemekhaneMenuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949CC4C843820B2936884F76 /* Pods_BilkentYemekhaneMenu_BilkentYemekhaneMenuUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		16E463D529F7FF9000895AE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16F835CA29ED6386007A29BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16E463C729F7FF8E00895AE8;
+			remoteInfo = BilkentYemekhaneWidgetExtension;
+		};
 		16F835E929ED6387007A29BE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 16F835CA29ED6386007A29BE /* Project object */;
@@ -59,6 +78,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		16E463D829F7FF9000895AE8 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				16E463D729F7FF9000895AE8 /* BilkentYemekhaneWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		167B40D029F012A40096C73A /* NutritionFactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionFactsTableViewCell.swift; sourceTree = "<group>"; };
 		167B40D129F012A40096C73A /* NutritionFactsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NutritionFactsTableViewCell.xib; sourceTree = "<group>"; };
@@ -69,6 +102,13 @@
 		167B40E229F0333F0096C73A /* AboutUsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
 		167B40EE29F037970096C73A /* tr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = tr; path = tr.lproj/Main.storyboard; sourceTree = "<group>"; };
 		167B40F129F037F00096C73A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		16E463C829F7FF8E00895AE8 /* BilkentYemekhaneWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BilkentYemekhaneWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		16E463C929F7FF8E00895AE8 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		16E463CB29F7FF8E00895AE8 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		16E463CE29F7FF8F00895AE8 /* BilkentYemekhaneWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilkentYemekhaneWidgetBundle.swift; sourceTree = "<group>"; };
+		16E463D029F7FF8F00895AE8 /* BilkentYemekhaneWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilkentYemekhaneWidget.swift; sourceTree = "<group>"; };
+		16E463D229F7FF9000895AE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16E463D429F7FF9000895AE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16F0510329F47FEB00DF35C9 /* ModifyNotificationsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyNotificationsViewController.xib; sourceTree = "<group>"; };
 		16F0510429F47FEB00DF35C9 /* ModifyNotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyNotificationsViewController.swift; sourceTree = "<group>"; };
 		16F0510829F4803F00DF35C9 /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationsTableViewCell.swift; path = ../../../../../Downloads/NotificationsTableViewCell.swift; sourceTree = "<group>"; };
@@ -89,6 +129,8 @@
 		16F8360929ED8FE1007A29BE /* MealTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealTableViewCell.xib; sourceTree = "<group>"; };
 		16F8360E29EDBF8C007A29BE /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		16F8361129EDC66F007A29BE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		16F9939929F900F50016FD43 /* BilkentYemekhaneWidgetExtensionDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BilkentYemekhaneWidgetExtensionDebug.entitlements; sourceTree = "<group>"; };
+		16F9939A29F9011A0016FD43 /* BilkentYemekhaneMenuDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BilkentYemekhaneMenuDebug.entitlements; sourceTree = "<group>"; };
 		16FE26D829F06EAF00483094 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		16FE26DA29F06EB200483094 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		16FE26DC29F091F900483094 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
@@ -98,16 +140,29 @@
 		16FE26E429F1722500483094 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
 		1A16BCE255D34D57277E6B3A /* Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests.debug.xcconfig"; path = "Target Support Files/Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests/Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		319A67B6C09743C001DE7AF8 /* Pods-BilkentYemekhaneMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilkentYemekhaneMenu.release.xcconfig"; path = "Target Support Files/Pods-BilkentYemekhaneMenu/Pods-BilkentYemekhaneMenu.release.xcconfig"; sourceTree = "<group>"; };
+		3602034B2EA30C844D683362 /* Pods_BilkentYemekhaneWidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BilkentYemekhaneWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39DFF9A3BD91EBBA09E1D051 /* Pods-BilkentYemekhaneMenuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilkentYemekhaneMenuTests.release.xcconfig"; path = "Target Support Files/Pods-BilkentYemekhaneMenuTests/Pods-BilkentYemekhaneMenuTests.release.xcconfig"; sourceTree = "<group>"; };
 		609CE93FC7218478EADAFBF6 /* Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests.release.xcconfig"; path = "Target Support Files/Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests/Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests.release.xcconfig"; sourceTree = "<group>"; };
 		73A95879172F2CD162079E25 /* Pods_BilkentYemekhaneMenuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BilkentYemekhaneMenuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91674F4A87B4CFB28253EC5A /* Pods-BilkentYemekhaneWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilkentYemekhaneWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-BilkentYemekhaneWidgetExtension/Pods-BilkentYemekhaneWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 		949CC4C843820B2936884F76 /* Pods_BilkentYemekhaneMenu_BilkentYemekhaneMenuUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BilkentYemekhaneMenu_BilkentYemekhaneMenuUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0AA77EE8E2AEA99D829DBA4 /* Pods-BilkentYemekhaneMenuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilkentYemekhaneMenuTests.debug.xcconfig"; path = "Target Support Files/Pods-BilkentYemekhaneMenuTests/Pods-BilkentYemekhaneMenuTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AEC59B3983BCFD133E39FF28 /* Pods-BilkentYemekhaneWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilkentYemekhaneWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-BilkentYemekhaneWidgetExtension/Pods-BilkentYemekhaneWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		E8741BD796A9F50E6D87A770 /* Pods-BilkentYemekhaneMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilkentYemekhaneMenu.debug.xcconfig"; path = "Target Support Files/Pods-BilkentYemekhaneMenu/Pods-BilkentYemekhaneMenu.debug.xcconfig"; sourceTree = "<group>"; };
 		F7A914EDDE7E1B040342E841 /* Pods_BilkentYemekhaneMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BilkentYemekhaneMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		16E463C529F7FF8E00895AE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16E463CC29F7FF8F00895AE8 /* SwiftUI.framework in Frameworks */,
+				16E463CA29F7FF8E00895AE8 /* WidgetKit.framework in Frameworks */,
+				9F5EC6DE9B184A18D3EAD522 /* Pods_BilkentYemekhaneWidgetExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		16F835CF29ED6386007A29BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -163,6 +218,17 @@
 			path = "Side Menu";
 			sourceTree = "<group>";
 		};
+		16E463CD29F7FF8F00895AE8 /* BilkentYemekhaneWidget */ = {
+			isa = PBXGroup;
+			children = (
+				16E463CE29F7FF8F00895AE8 /* BilkentYemekhaneWidgetBundle.swift */,
+				16E463D029F7FF8F00895AE8 /* BilkentYemekhaneWidget.swift */,
+				16E463D229F7FF9000895AE8 /* Assets.xcassets */,
+				16E463D429F7FF9000895AE8 /* Info.plist */,
+			);
+			path = BilkentYemekhaneWidget;
+			sourceTree = "<group>";
+		};
 		16F0510229F47FBD00DF35C9 /* Notifications Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,10 +258,12 @@
 		16F835C929ED6386007A29BE = {
 			isa = PBXGroup;
 			children = (
+				16F9939929F900F50016FD43 /* BilkentYemekhaneWidgetExtensionDebug.entitlements */,
 				16FE26D929F06EAF00483094 /* Localizable.strings */,
 				16F835D429ED6386007A29BE /* BilkentYemekhaneMenu */,
 				16F835EB29ED6387007A29BE /* BilkentYemekhaneMenuTests */,
 				16F835F529ED6387007A29BE /* BilkentYemekhaneMenuUITests */,
+				16E463CD29F7FF8F00895AE8 /* BilkentYemekhaneWidget */,
 				16F835D329ED6386007A29BE /* Products */,
 				91C5D926EB67B7937BDA2976 /* Pods */,
 				852CAD36226C54FB5A5C2177 /* Frameworks */,
@@ -208,6 +276,7 @@
 				16F835D229ED6386007A29BE /* BilkentYemekhaneMenu.app */,
 				16F835E829ED6387007A29BE /* BilkentYemekhaneMenuTests.xctest */,
 				16F835F229ED6387007A29BE /* BilkentYemekhaneMenuUITests.xctest */,
+				16E463C829F7FF8E00895AE8 /* BilkentYemekhaneWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,6 +284,7 @@
 		16F835D429ED6386007A29BE /* BilkentYemekhaneMenu */ = {
 			isa = PBXGroup;
 			children = (
+				16F9939A29F9011A0016FD43 /* BilkentYemekhaneMenuDebug.entitlements */,
 				16F8361029EDC664007A29BE /* Managers */,
 				16F8360D29EDBF7E007A29BE /* Models */,
 				16F8360729ED8FC4007A29BE /* Cells */,
@@ -320,6 +390,9 @@
 				F7A914EDDE7E1B040342E841 /* Pods_BilkentYemekhaneMenu.framework */,
 				949CC4C843820B2936884F76 /* Pods_BilkentYemekhaneMenu_BilkentYemekhaneMenuUITests.framework */,
 				73A95879172F2CD162079E25 /* Pods_BilkentYemekhaneMenuTests.framework */,
+				16E463C929F7FF8E00895AE8 /* WidgetKit.framework */,
+				16E463CB29F7FF8E00895AE8 /* SwiftUI.framework */,
+				3602034B2EA30C844D683362 /* Pods_BilkentYemekhaneWidgetExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -333,6 +406,8 @@
 				609CE93FC7218478EADAFBF6 /* Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests.release.xcconfig */,
 				A0AA77EE8E2AEA99D829DBA4 /* Pods-BilkentYemekhaneMenuTests.debug.xcconfig */,
 				39DFF9A3BD91EBBA09E1D051 /* Pods-BilkentYemekhaneMenuTests.release.xcconfig */,
+				AEC59B3983BCFD133E39FF28 /* Pods-BilkentYemekhaneWidgetExtension.debug.xcconfig */,
+				91674F4A87B4CFB28253EC5A /* Pods-BilkentYemekhaneWidgetExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -340,6 +415,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		16E463C729F7FF8E00895AE8 /* BilkentYemekhaneWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16E463DB29F7FF9000895AE8 /* Build configuration list for PBXNativeTarget "BilkentYemekhaneWidgetExtension" */;
+			buildPhases = (
+				A72E0AE4C12F3F41D2E7A1F5 /* [CP] Check Pods Manifest.lock */,
+				16E463C429F7FF8E00895AE8 /* Sources */,
+				16E463C529F7FF8E00895AE8 /* Frameworks */,
+				16E463C629F7FF8E00895AE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BilkentYemekhaneWidgetExtension;
+			productName = BilkentYemekhaneWidgetExtension;
+			productReference = 16E463C829F7FF8E00895AE8 /* BilkentYemekhaneWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		16F835D129ED6386007A29BE /* BilkentYemekhaneMenu */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16F835FC29ED6387007A29BE /* Build configuration list for PBXNativeTarget "BilkentYemekhaneMenu" */;
@@ -349,10 +442,12 @@
 				16F835CF29ED6386007A29BE /* Frameworks */,
 				16F835D029ED6386007A29BE /* Resources */,
 				379A0D3470C1658741411D06 /* [CP] Embed Pods Frameworks */,
+				16E463D829F7FF9000895AE8 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				16E463D629F7FF9000895AE8 /* PBXTargetDependency */,
 			);
 			name = BilkentYemekhaneMenu;
 			productName = BilkentYemekhaneMenu;
@@ -408,6 +503,9 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					16E463C729F7FF8E00895AE8 = {
+						CreatedOnToolsVersion = 14.3;
+					};
 					16F835D129ED6386007A29BE = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -438,11 +536,21 @@
 				16F835D129ED6386007A29BE /* BilkentYemekhaneMenu */,
 				16F835E729ED6387007A29BE /* BilkentYemekhaneMenuTests */,
 				16F835F129ED6387007A29BE /* BilkentYemekhaneMenuUITests */,
+				16E463C729F7FF8E00895AE8 /* BilkentYemekhaneWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		16E463C629F7FF8E00895AE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16E463D329F7FF9000895AE8 /* Assets.xcassets in Resources */,
+				16F9939829F808580016FD43 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		16F835D029ED6386007A29BE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -534,6 +642,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests/Pods-BilkentYemekhaneMenu-BilkentYemekhaneMenuUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A72E0AE4C12F3F41D2E7A1F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BilkentYemekhaneWidgetExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A954C25F1412B194BCABAD68 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -581,6 +711,19 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		16E463C429F7FF8E00895AE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F9939529F800C40016FD43 /* MenuManager.swift in Sources */,
+				16F9939429F800C10016FD43 /* NetworkManager.swift in Sources */,
+				16F9939729F800DE0016FD43 /* UserDefaultsManager.swift in Sources */,
+				16E463CF29F7FF8F00895AE8 /* BilkentYemekhaneWidgetBundle.swift in Sources */,
+				16E463D129F7FF8F00895AE8 /* BilkentYemekhaneWidget.swift in Sources */,
+				16F9939629F800D80016FD43 /* Models.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		16F835CE29ED6386007A29BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -624,6 +767,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		16E463D629F7FF9000895AE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16E463C729F7FF8E00895AE8 /* BilkentYemekhaneWidgetExtension */;
+			targetProxy = 16E463D529F7FF9000895AE8 /* PBXContainerItemProxy */;
+		};
 		16F835EA29ED6387007A29BE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 16F835D129ED6386007A29BE /* BilkentYemekhaneMenu */;
@@ -666,6 +814,65 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		16E463D929F7FF9000895AE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEC59B3983BCFD133E39FF28 /* Pods-BilkentYemekhaneWidgetExtension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = BilkentYemekhaneWidgetExtensionDebug.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7WX6W95X32;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BilkentYemekhaneWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BilkentYemekhaneWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = altinisik.mustafa.BilkentYemekhaneMenu.BilkentYemekhaneWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		16E463DA29F7FF9000895AE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91674F4A87B4CFB28253EC5A /* Pods-BilkentYemekhaneWidgetExtension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7WX6W95X32;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BilkentYemekhaneWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BilkentYemekhaneWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = altinisik.mustafa.BilkentYemekhaneMenu.BilkentYemekhaneWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		16F835FA29ED6387007A29BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -786,8 +993,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E8741BD796A9F50E6D87A770 /* Pods-BilkentYemekhaneMenu.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BilkentYemekhaneMenu/BilkentYemekhaneMenuDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7WX6W95X32;
@@ -817,6 +1026,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 319A67B6C09743C001DE7AF8 /* Pods-BilkentYemekhaneMenu.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -927,6 +1137,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		16E463DB29F7FF9000895AE8 /* Build configuration list for PBXNativeTarget "BilkentYemekhaneWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16E463D929F7FF9000895AE8 /* Debug */,
+				16E463DA29F7FF9000895AE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		16F835CD29ED6386007A29BE /* Build configuration list for PBXProject "BilkentYemekhaneMenu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

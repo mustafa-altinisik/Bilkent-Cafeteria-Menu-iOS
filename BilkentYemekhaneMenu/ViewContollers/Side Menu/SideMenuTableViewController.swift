@@ -137,6 +137,10 @@ class SideMenuTableViewController: UITableViewController {
     private func setLanguage(_ language: String) {
         let defaults = UserDefaults.standard
         defaults.set([language], forKey: "AppleLanguages")
+        guard let sharedDefaults = UserDefaults(suiteName: "group.altinisik.mustafa.BilkentYemekhaneMenu") else { return }
+        sharedDefaults.set(language, forKey: "SelectedLanguage")
+        sharedDefaults.synchronize()
+        MenuManager.shared.updateLanguageAndRefreshWidget()
         defaults.synchronize()
     }
     

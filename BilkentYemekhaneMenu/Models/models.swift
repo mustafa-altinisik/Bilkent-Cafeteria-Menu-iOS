@@ -46,7 +46,7 @@ struct Meal: Codable {
 }
 
 // Represents a course within a meal with name, ID, and English name
-struct Course: Codable {
+struct Course: Codable, Hashable{
     let englishName: String
     let id: Int
     let name: String
