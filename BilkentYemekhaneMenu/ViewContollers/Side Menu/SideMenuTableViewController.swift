@@ -27,7 +27,9 @@ class SideMenuTableViewController: UITableViewController {
             CategoryWithSystemImageName(categoryId: 3, categoryNameToBeDisplayed: NSLocalizedString("language", comment: ""), categoryIcon: "globe"),
         ],
         [
-            CategoryWithSystemImageName(categoryId: 4, categoryNameToBeDisplayed: NSLocalizedString("aboutUs", comment: ""), categoryIcon: "person.2")
+            CategoryWithSystemImageName(categoryId: 4, categoryNameToBeDisplayed: NSLocalizedString("aboutUs", comment: ""), categoryIcon: "person.2"),
+            CategoryWithSystemImageName(categoryId: 5, categoryNameToBeDisplayed: NSLocalizedString("shareTheApp", comment: ""), categoryIcon: "square.and.arrow.up"),
+            CategoryWithSystemImageName(categoryId: 6, categoryNameToBeDisplayed: NSLocalizedString("rateUs", comment: ""), categoryIcon: "hand.thumbsup")
         ]
     ]
     
@@ -86,6 +88,17 @@ class SideMenuTableViewController: UITableViewController {
             presentLanguageAlert()
         case 4: // About Us Screen
             presentFullScreen(AboutUsViewController())
+        case 5: //Share app
+            let appURL = URL(string: "https://apps.apple.com/tr/app/daily-hadiths/id6448339268")
+            let activityViewController = UIActivityViewController(activityItems: [appURL], applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view // For iPad
+            present(activityViewController, animated: true, completion: nil)
+            
+        case 6: //Rate us
+            if let url = URL(string: "itms-apps://itunes.apple.com/app/id6448339268?action=write-review") {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+            
         default:
             break
         }

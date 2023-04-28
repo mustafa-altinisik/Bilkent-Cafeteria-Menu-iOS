@@ -43,6 +43,7 @@ class MainScreenViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         coursesTable.reloadData()
+        print("App opened")
     }
     
     @IBAction func favoriteCoursesButtonTapped(_ sender: Any) {

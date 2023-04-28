@@ -22,8 +22,6 @@
 		16E463D729F7FF9000895AE8 /* BilkentYemekhaneWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 16E463C829F7FF8E00895AE8 /* BilkentYemekhaneWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		16F0510529F47FEB00DF35C9 /* ModifyNotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F0510329F47FEB00DF35C9 /* ModifyNotificationsViewController.xib */; };
 		16F0510629F47FEB00DF35C9 /* ModifyNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F0510429F47FEB00DF35C9 /* ModifyNotificationsViewController.swift */; };
-		16F0510A29F4803F00DF35C9 /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F0510829F4803F00DF35C9 /* NotificationsTableViewCell.swift */; };
-		16F0510B29F4803F00DF35C9 /* NotificationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F0510929F4803F00DF35C9 /* NotificationsTableViewCell.xib */; };
 		16F835D629ED6386007A29BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F835D529ED6386007A29BE /* AppDelegate.swift */; };
 		16F835D829ED6386007A29BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F835D729ED6386007A29BE /* SceneDelegate.swift */; };
 		16F835DA29ED6386007A29BE /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F835D929ED6386007A29BE /* MainScreenViewController.swift */; };
@@ -42,6 +40,8 @@
 		16F9939629F800D80016FD43 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8360E29EDBF8C007A29BE /* Models.swift */; };
 		16F9939729F800DE0016FD43 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE26DC29F091F900483094 /* UserDefaultsManager.swift */; };
 		16F9939829F808580016FD43 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16FE26D929F06EAF00483094 /* Localizable.strings */; };
+		16F993EB29FBD0130016FD43 /* NotificationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F993E929FBD0130016FD43 /* NotificationsTableViewCell.xib */; };
+		16F993EC29FBD0130016FD43 /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F993EA29FBD0130016FD43 /* NotificationsTableViewCell.swift */; };
 		16FE26D729F06EAF00483094 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16FE26D929F06EAF00483094 /* Localizable.strings */; };
 		16FE26DD29F091F900483094 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE26DC29F091F900483094 /* UserDefaultsManager.swift */; };
 		16FE26E029F094CB00483094 /* LikedCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE26DE29F094CB00483094 /* LikedCoursesViewController.swift */; };
@@ -111,8 +111,6 @@
 		16E463D429F7FF9000895AE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16F0510329F47FEB00DF35C9 /* ModifyNotificationsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyNotificationsViewController.xib; sourceTree = "<group>"; };
 		16F0510429F47FEB00DF35C9 /* ModifyNotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyNotificationsViewController.swift; sourceTree = "<group>"; };
-		16F0510829F4803F00DF35C9 /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationsTableViewCell.swift; path = ../../../../../Downloads/NotificationsTableViewCell.swift; sourceTree = "<group>"; };
-		16F0510929F4803F00DF35C9 /* NotificationsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NotificationsTableViewCell.xib; path = ../../../../../Downloads/NotificationsTableViewCell.xib; sourceTree = "<group>"; };
 		16F835D229ED6386007A29BE /* BilkentYemekhaneMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BilkentYemekhaneMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F835D529ED6386007A29BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16F835D729ED6386007A29BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +129,8 @@
 		16F8361129EDC66F007A29BE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		16F9939929F900F50016FD43 /* BilkentYemekhaneWidgetExtensionDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BilkentYemekhaneWidgetExtensionDebug.entitlements; sourceTree = "<group>"; };
 		16F9939A29F9011A0016FD43 /* BilkentYemekhaneMenuDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BilkentYemekhaneMenuDebug.entitlements; sourceTree = "<group>"; };
+		16F993E929FBD0130016FD43 /* NotificationsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationsTableViewCell.xib; sourceTree = "<group>"; };
+		16F993EA29FBD0130016FD43 /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewCell.swift; sourceTree = "<group>"; };
 		16FE26D829F06EAF00483094 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		16FE26DA29F06EB200483094 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		16FE26DC29F091F900483094 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
@@ -238,15 +238,6 @@
 			path = "Notifications Screen";
 			sourceTree = "<group>";
 		};
-		16F0510729F4802A00DF35C9 /* NotificationTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				16F0510829F4803F00DF35C9 /* NotificationsTableViewCell.swift */,
-				16F0510929F4803F00DF35C9 /* NotificationsTableViewCell.xib */,
-			);
-			path = NotificationTableViewCell;
-			sourceTree = "<group>";
-		};
 		16F0511229F5236400DF35C9 /* Launch Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,7 +330,7 @@
 		16F8360729ED8FC4007A29BE /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				16F0510729F4802A00DF35C9 /* NotificationTableViewCell */,
+				16F993E829FBD0130016FD43 /* Notification Cell */,
 				16F8360C29ED8FE8007A29BE /* MealTableViewCell */,
 				167B40D429F012AB0096C73A /* NutritionFactsTableViewCell */,
 				167B40DA29F02A310096C73A /* SideMenuPredefinedCategoryTableViewCell.swift */,
@@ -373,6 +364,15 @@
 				16FE26E429F1722500483094 /* NotificationsManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		16F993E829FBD0130016FD43 /* Notification Cell */ = {
+			isa = PBXGroup;
+			children = (
+				16F993E929FBD0130016FD43 /* NotificationsTableViewCell.xib */,
+				16F993EA29FBD0130016FD43 /* NotificationsTableViewCell.swift */,
+			);
+			path = "Notification Cell";
 			sourceTree = "<group>";
 		};
 		16FE26DB29F07BE800483094 /* About Us Screen */ = {
@@ -563,9 +563,9 @@
 				16F835E229ED6387007A29BE /* LaunchScreen.storyboard in Resources */,
 				16FE26E129F094CB00483094 /* LikedCoursesViewController.xib in Resources */,
 				16FE26D729F06EAF00483094 /* Localizable.strings in Resources */,
+				16F993EB29FBD0130016FD43 /* NotificationsTableViewCell.xib in Resources */,
 				16F835DF29ED6387007A29BE /* Assets.xcassets in Resources */,
 				16F835DD29ED6386007A29BE /* Main.storyboard in Resources */,
-				16F0510B29F4803F00DF35C9 /* NotificationsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -728,7 +728,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16F0510A29F4803F00DF35C9 /* NotificationsTableViewCell.swift in Sources */,
+				16F993EC29FBD0130016FD43 /* NotificationsTableViewCell.swift in Sources */,
 				167B40E329F0333F0096C73A /* AboutUsViewController.swift in Sources */,
 				167B40D229F012A40096C73A /* NutritionFactsTableViewCell.swift in Sources */,
 				16F0510629F47FEB00DF35C9 /* ModifyNotificationsViewController.swift in Sources */,
@@ -1013,12 +1013,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = altinisik.mustafa.BilkentYemekhaneMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1045,12 +1048,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = altinisik.mustafa.BilkentYemekhaneMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
