@@ -89,7 +89,7 @@ class SideMenuTableViewController: UITableViewController {
         case 4: // About Us Screen
             presentFullScreen(AboutUsViewController())
         case 5: //Share app
-            let appURL = URL(string: "https://apps.apple.com/tr/app/daily-hadiths/id6448339268")
+            let appURL = URL(string: "https://apps.apple.com/tr/app/id6448339268")
             let activityViewController = UIActivityViewController(activityItems: [appURL], applicationActivities: nil)
             activityViewController.popoverPresentationController?.sourceView = self.view // For iPad
             present(activityViewController, animated: true, completion: nil)
