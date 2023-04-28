@@ -7,9 +7,10 @@
 
 import UIKit
 import SideMenu
+import SwiftUI
 
-class MainScreenViewController: UIViewController {
-
+final class MainScreenViewController: UIViewController {
+    
     @IBOutlet private weak var coursesTable: UITableView!
     @IBOutlet private weak var sideMenuButton: UIButton!
     @IBOutlet private weak var lunchButton: UIButton!
@@ -39,6 +40,8 @@ class MainScreenViewController: UIViewController {
         setLeftSideMenu()
         NotificationManager.shared.setScheduledNotifications()
         NotificationCenter.default.addObserver(self, selector: #selector(favoriteCoursesButtonTapped), name: Notification.Name("PresentLikedCoursesScreen"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleSetLabelsNotification), name: Notification.Name("RefreshMainScreen"), object: nil)
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -128,6 +131,11 @@ class MainScreenViewController: UIViewController {
         unselectAllDayButtons(exceptTheDay: 7)
         sundayButton.isSelected = true
     }
+    
+    @objc func handleSetLabelsNotification() {
+        setLabels()
+    }
+    
     private func setLabels(){
         let calendar = Calendar.current
         let components = calendar.dateComponents([.weekday], from: Date())

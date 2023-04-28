@@ -3,16 +3,6 @@ import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
-    
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        if application.applicationState == .background {
-            // Code to handle app opened from background
-            print("App opened from background")
-        } else {
-            // Code to handle app launched for the first time
-            print("App launched")
-        }
-    }
 
     // Create a unique 16-character hexadecimal ID for the user if not already set
     func createUniqueId() {

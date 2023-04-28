@@ -92,19 +92,21 @@ struct MyWidgetView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(headerText())
-                .font(.system(size: 20))
+                .font(.system(.title2))
+                .minimumScaleFactor(0.5)
             ForEach(courses, id: \.self) { course in
                 HStack(alignment: .top, spacing: 4) {
                     Text("•")
-                        .font(.system(size: 16))
+                        .font(.system(.body))
+                        .minimumScaleFactor(0.5)
                     if languageCode == "tr" {
                         Text(courseNameWithSymbol(course: course))
-                            .fixedSize(horizontal: false, vertical: true)
-                            .font(.system(size: 16))
+                            .font(.system(.body))
+                            .minimumScaleFactor(0.5)
                     } else {
                         Text(courseEnglishNameWithSymbol(course: course))
-                            .fixedSize(horizontal: false, vertical: true)
-                            .font(.system(size: 16))
+                            .font(.system(.body))
+                            .minimumScaleFactor(0.5)
                     }
                 }
             }

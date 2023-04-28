@@ -12,7 +12,7 @@
         <!--Main Screen View Controller-->
         <scene sceneID="StO-Iq-S81">
             <objects>
-                <viewController id="zDx-m7-wQC" customClass="MainScreenViewController" customModule="BilkentYemekhaneMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="main" id="zDx-m7-wQC" customClass="MainScreenViewController" customModule="BilkentYemekhaneMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q0b-vk-0yq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
