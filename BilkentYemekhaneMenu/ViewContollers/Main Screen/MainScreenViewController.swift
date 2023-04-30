@@ -133,6 +133,9 @@ final class MainScreenViewController: UIViewController {
     }
     
     @objc func handleSetLabelsNotification() {
+        unselectAllDayButtons()
+        lunchButton.isSelected = false
+        dinnerButton.isSelected = false
         setLabels()
     }
     
@@ -189,11 +192,14 @@ final class MainScreenViewController: UIViewController {
         setMenuFor(dayOfTheWeek: selectedButtonIndex, foodType: foodType)
     }
 
-    private func unselectAllDayButtons(exceptTheDay: Int){
-        disableLunchDinnerButtonsIfNeeded(currentDay: exceptTheDay)
-        let dayButtons = [sundayButton,mondayButton, tuesdayButton, wednesdayButton, thursdayButton, fridayButton, saturdayButton]
+    private func unselectAllDayButtons(exceptTheDay: Int? = nil) {
+        if let day = exceptTheDay {
+            disableLunchDinnerButtonsIfNeeded(currentDay: day)
+        }
+        
+        let dayButtons = [sundayButton, mondayButton, tuesdayButton, wednesdayButton, thursdayButton, fridayButton, saturdayButton]
         for (index, button) in dayButtons.enumerated() {
-            if index == exceptTheDay {
+            if let day = exceptTheDay, index == day {
                 button?.isSelected = true
             } else {
                 button?.isSelected = false
