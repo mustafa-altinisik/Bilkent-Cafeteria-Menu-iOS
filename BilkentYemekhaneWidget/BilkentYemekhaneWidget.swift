@@ -48,6 +48,10 @@ struct MyProvider: TimelineProvider {
                 } else {
                     courses = meals.dinner.courses
                 }
+            } else {
+                // Create a "No data available" course when there's no menu data
+                let noDataCourse = Course(englishName: "No course data found.", id: -1, name: "Yemek verisi bulunamadı.")
+                courses = [noDataCourse]
             }
 
             var entries: [MyEntry] = []
@@ -74,6 +78,7 @@ struct MyProvider: TimelineProvider {
             completion(timeline)
         }
     }
+
 }
 
 struct MyEntry: TimelineEntry {
