@@ -8,6 +8,7 @@
 import UIKit
 import SideMenu
 import SwiftUI
+import Lottie
 
 final class MainScreenViewController: UIViewController {
     
@@ -31,6 +32,8 @@ final class MainScreenViewController: UIViewController {
     static var fixedMeal: Meal?
     static var alternativeMeal: Meal?
     
+    var isNoDataAnimationPut = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -271,6 +274,7 @@ final class MainScreenViewController: UIViewController {
         
         MenuManager.shared.returnMenuFor(day: dayOfTheWeek) { meals in
             if let meals = meals {
+                self.removeAnimation()
                 if foodType ==  1{//lunch
                     MainScreenViewController.fixedMeal = meals.lunch
                     MainScreenViewController.alternativeMeal = meals.alternative
@@ -284,9 +288,46 @@ final class MainScreenViewController: UIViewController {
                 }
                 
             } else {
-                print("Error fetching menu")
+                if !self.isNoDataAnimationPut{
+                    self.putAnimation()
+                }
             }
         }
+    }
+    
+    private func putAnimation() {
+        isNoDataAnimationPut = true
+        let noDataFoundAnimation = LottieAnimationView(name: "noDataFound")
+        
+        // Set the frame of the animation to the bounds of the main view
+        noDataFoundAnimation.frame = view.bounds
+        noDataFoundAnimation.contentMode = .scaleAspectFit
+        noDataFoundAnimation.isUserInteractionEnabled = false
+
+        // Add the animation to the same view as the coursesTable
+        view.addSubview(noDataFoundAnimation)
+
+        // Bring the animation to the front
+        view.bringSubviewToFront(noDataFoundAnimation)
+
+        noDataFoundAnimation.loopMode = .loop
+        noDataFoundAnimation.play()
+
+        // Hide the coursesTable while the animation is displayed
+        coursesTable.isHidden = true
+    }
+
+
+    private func removeAnimation() {
+        for subview in view.subviews {
+            if let animationView = subview as? LottieAnimationView {
+                animationView.stop()
+                animationView.removeFromSuperview()
+                isNoDataAnimationPut = false
+            }
+        }
+        // Show the coursesTable after the animation is removed
+        coursesTable.isHidden = false
     }
 }
 

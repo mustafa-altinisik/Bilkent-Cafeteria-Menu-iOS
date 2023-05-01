@@ -46,8 +46,14 @@ final class MenuManager {
                     self.menuExpirationDate = expirationDate
                     self.cachedMenu = menu
                     
-                    // Return the menu for the requested day
-                    completion(menu[day - 1])
+                    if day - 1 > menu.count{
+                        // Return the menu for the requested day
+                        completion(menu[day - 1])
+                    } else{
+                        // No menu for selected meal.
+                        completion(nil)
+                    }
+                    
                 }
             }
         }

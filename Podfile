@@ -8,6 +8,7 @@ target 'BilkentYemekhaneMenu' do
   # Pods for BilkentYemekhaneMenu
     pod 'SideMenu'
     pod 'Alamofire'
+    pod 'lottie-ios'
     
   target 'BilkentYemekhaneWidgetExtension' do
     inherit! :search_paths
